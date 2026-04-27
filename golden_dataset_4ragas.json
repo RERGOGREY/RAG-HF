@@ -1,0 +1,1754 @@
+[
+  {
+    "query": "What is the effect of decreasing the stride length on the reported perplexity of the model?",
+    "expected_answer": "The smaller the stride, the more context the model will have in making each prediction, and the better the reported perplexity will typically be. Decreasing the stride length improves the reported perplexity of the model.",
+    "expected_context_keywords": [
+      "sliding-window",
+      "perplexity",
+      "stride length"
+    ],
+    "source_context": "load in the WikiText-2 dataset and evaluate the perplexity using a few different sliding-window strategies. Since this dataset is small and we're just doing one forward pass over the set, we can just ...",
+    "library": "transformers",
+    "source": "perplexity.md"
+  },
+  {
+    "query": "What is the AP value achieved by ResNet50-DC5 as the backbone of the model in 50 epochs?",
+    "expected_answer": "The AP value achieved by ResNet50-DC5 as the backbone of the model in 50 epochs is 45.7%. This is mentioned as the best performance on the MS-COCO benchmark among DETR-like detection models under the same setting.",
+    "expected_context_keywords": [
+      "MS-COCO",
+      "ResNet50-DC5",
+      "AP"
+    ],
+    "source_context": "to the best performance on MS-COCO benchmark among the DETR-like detection models under the same setting, e.g., AP 45.7% using ResNet50-DC5 as backbone trained in 50 epochs. We also conducted extensiv...",
+    "library": "transformers",
+    "source": "model_doc/dab-detr.md"
+  },
+  {
+    "query": "What is the IAM Handwriting Database used for in the finetuning process?",
+    "expected_answer": "The IAM Handwriting Database is used for finetuning TrOCR in a notebook using Seq2SeqTrainer.",
+    "expected_context_keywords": [
+      "TrOCR",
+      "Seq2SeqTrainer",
+      "IAM Handwriting Database"
+    ],
+    "source_context": "with TrOCR. - A notebook on how to finetune TrOCR on IAM Handwriting Database using Seq2SeqTrainer. - An interactive-demo on TrOCR handwritten character recognition. - A notebook on inference with TrO...",
+    "library": "transformers",
+    "source": "model_doc/trocr.md"
+  },
+  {
+    "query": "What programming languages does Arrow support?",
+    "expected_answer": "Arrow is language-agnostic, meaning it supports different programming languages, including NumPy, Pandas, PyTorch, and TensorFlow.",
+    "expected_context_keywords": [
+      "language-agnostic",
+      "NumPy",
+      "PyTorch"
+    ],
+    "source_context": "Datasets 🤝 Arrow What is Arrow? Arrow enables large amounts of data to be processed and moved quickly. It is a specific data format that stores data in a columnar memory layout. This provides several ...",
+    "library": "datasets",
+    "source": "about_arrow.md"
+  },
+  {
+    "query": "What type of data hand-offs are allowed by Arrow?",
+    "expected_answer": "Arrow allows for copy-free hand-offs to standard machine learning tools such as NumPy, Pandas, PyTorch, and TensorFlow.",
+    "expected_context_keywords": [
+      "Arrow",
+      "columnar",
+      "zero-copy"
+    ],
+    "source_context": "Datasets 🤝 Arrow What is Arrow? Arrow enables large amounts of data to be processed and moved quickly. It is a specific data format that stores data in a columnar memory layout. This provides several ...",
+    "library": "datasets",
+    "source": "about_arrow.md"
+  },
+  {
+    "query": "What are the default input channels accepted by UNet2DConditionModel parameters?",
+    "expected_answer": "A UNet2DConditionModel by default accepts 4 channels in the input sample. To adapt a model for inpainting, this needs to be changed to 9 channels. The pretrained weights of other components are initialized from their checkpoints, but the input channel weights of the model are randomly initialized. This change requires finetuning the model to avoid returning noise.",
+    "expected_context_keywords": [
+      "UNet2DConditionModel",
+      "inpainting",
+      "text-to-image"
+    ],
+    "source_context": "Adapt a model to a new task Many diffusion systems share the same components, allowing you to adapt a pretrained model for one task to an entirely different task. This guide will show you how to adapt...",
+    "library": "diffusers",
+    "source": "training/adapt_a_model.md"
+  },
+  {
+    "query": "What is the effect of increasing the motion bucket id on the generated video?",
+    "expected_answer": "Increasing the motion bucket id increases the motion of the generated video. This allows for more control over the generated video's motion when using Micro-conditioning Stable Diffusion Video.",
+    "expected_context_keywords": [
+      "motion bucket id",
+      "Micro-conditioning",
+      "Stable Diffusion Video"
+    ],
+    "source_context": "memory) but the video might have some flickering. Using all these tricks together should lower the memory requirement to less than 8GB VRAM. Micro-conditioning Stable Diffusion Video also accepts micr...",
+    "library": "diffusers",
+    "source": "using-diffusers/svd.md"
+  },
+  {
+    "query": "What are some examples of special tokens used in model templates?",
+    "expected_answer": "Special tokens used in model templates include unique tokens to mark message boundaries, such as . The specific tokens used can vary by model, with OpenAI using instead of tags. These tokens help the model distinguish between different parts of the conversation.",
+    "expected_context_keywords": [
+      "Special Tokens",
+      "Role Separation",
+      "Message Boundaries"
+    ],
+    "source_context": "template to our list would produce: This tells the model: 1. The conversation history (user/assistant turns). 2. The model's turn to generate a response ( at the end). --- **Key Notes**: - **Role Sepa...",
+    "library": "transformers",
+    "source": "model_doc/deepseek_v3.md"
+  },
+  {
+    "query": "What is the main difference between the model architecture of ProphetNet and the original Transformer model?",
+    "expected_answer": "The main difference between the model architecture of ProphetNet and the original Transformer model is the replacement of the standard self-attention mechanism in the decoder with a main self-attention mechanism and a self and n-stream (predict) self-attention mechanism. This modification is specific to the ProphetNet model.",
+    "expected_context_keywords": [
+      "ProphetNet",
+      "Transformer",
+      "self-attention mechanism"
+    ],
+    "source_context": "Usage tips - ProphetNet is a model with absolute position embeddings so it's usually advised to pad the inputs on the right rather than the left. - The model architecture is based on the original Tran...",
+    "library": "transformers",
+    "source": "model_doc/prophetnet.md"
+  },
+  {
+    "query": "How can a test be skipped unconditionally using pytest?",
+    "expected_answer": "A test can be skipped unconditionally using pytest via pytest.mark.skip or the skipif decorator. For example, @pytest.mark.skip or pytest.mark.skipif.",
+    "expected_context_keywords": [
+      "pytest",
+      "skipif",
+      "xfail"
+    ],
+    "source_context": "on an external resource which is not available at the moment (for example a database). - A **xfail** means that you expect a test to fail for some reason. A common example is a test for a feature not ...",
+    "library": "transformers",
+    "source": "testing.md"
+  },
+  {
+    "query": "What is the purpose of using the Quantization technique in inference?",
+    "expected_answer": "The purpose of using the Quantization technique in inference is to reduce the memory requirements of very large models by storing model weights in a lower precision data type, which helps decrease memory usage but may impact video quality.",
+    "expected_context_keywords": [
+      "Quantization",
+      "inference",
+      "precision"
+    ],
+    "source_context": "Make sure to check out the Schedulers guide to learn how to explore the tradeoff between scheduler speed and quality, and see the reuse components across pipelines section to learn how to efficiently ...",
+    "library": "diffusers",
+    "source": "api/pipelines/latte.md"
+  },
+  {
+    "query": "What types of user interfaces are recommended for feature-complete functionality in diffusion pipelines?",
+    "expected_answer": "For feature-complete user interfaces, one should rather have a look at InvokeAI, Diffuzers, and lama-cleaner, as pipelines are not intended to be feature-complete user interfaces.",
+    "expected_context_keywords": [
+      "InvokeAI",
+      "Diffuzers",
+      "lama-cleaner"
+    ],
+    "source_context": "to one diffusion paper/project/release. Multiple pipeline files can be gathered in one pipeline folder, as it’s done for [](https://github.com/huggingface/diffusers/tree/main/src/diffusers/pipelines/s...",
+    "library": "diffusers",
+    "source": "conceptual/philosophy.md"
+  },
+  {
+    "query": "How does the use of function speed up the inference process in Würstchen?",
+    "expected_answer": "The use of function can speed up the inference process in Würstchen by about 2-3x. However, the provided documentation does not contain sufficient information to explain how this function works. It is mentioned that this function can be used to gain a speed-up, but the details are not provided. For more information, one would need to refer to the paper or the original codebase.",
+    "expected_context_keywords": [
+      "Speed-Up Inference",
+      "VQGAN",
+      "WürstchenCombinedPipeline"
+    ],
+    "source_context": "initialize the two main pipelines of Würstchen individually. Würstchen consists of 3 stages: Stage C, Stage B, Stage A. They all have different jobs and work only together. When generating text-condit...",
+    "library": "diffusers",
+    "source": "api/pipelines/wuerstchen.md"
+  },
+  {
+    "query": "What are the available pipelines for text-to-image generation tasks?",
+    "expected_answer": "The available pipelines for text-to-image generation tasks are pipeline_if.py. Additionally, there are other pipelines available for image-to-image generation tasks, such as pipeline_if_img2img.py, pipeline_if_img2img_superresolution.py, pipeline_if_inpainting.py, and pipeline_if_inpainting_superresolution.py, but only pipeline_if.py is specifically for text-to-image generation.",
+    "expected_context_keywords": [
+      "pipeline_if.py",
+      "Text-to-Image Generation",
+      "IFPipeline"
+    ],
+    "source_context": "for memory When optimizing for GPU memory, we can use the standard diffusers CPU offloading APIs. Either the model based CPU offloading, or the more aggressive layer based CPU offloading. Additionally...",
+    "library": "diffusers",
+    "source": "api/pipelines/deepfloyd_if.md"
+  },
+  {
+    "query": "What is the purpose of adding tests to Transformers when adding a custom pipeline?",
+    "expected_answer": "The purpose of adding tests to Transformers when adding a custom pipeline is to ensure everything works as expected and to test future compatibility with new models. This involves adding a new test for the pipeline in transformers/tests/pipelines and implementing specific tests such as test_small_model_pt and test_large_model_pt. The tests are designed to be generic and run on models defined in model_mapping. This process also requires requesting a review from the Transformers team.",
+    "expected_context_keywords": [
+      "pipelines",
+      "Transformers",
+      "model_mapping"
+    ],
+    "source_context": "code is copied to the Hub, and the pipelines model and tokenizer are also saved and pushed to the Hub. Your pipeline should now be available on the Hub under your namespace. To use the pipeline, add w...",
+    "library": "transformers",
+    "source": "add_new_pipeline.md"
+  },
+  {
+    "query": "How does Perceiver IO overcome the limitations of the original Transformer model?",
+    "expected_answer": "Perceiver IO overcomes the limitations of the original Transformer model by learning to flexibly query the model's latent space to produce outputs of arbitrary size and semantics, without sacrificing the original's appealing properties. This allows it to decouple model depth from data size and scale linearly with data size, with respect to both input and output sizes. The Perceiver IO model achieves strong results on tasks with highly structured output spaces.",
+    "expected_context_keywords": [
+      "Perceiver IO",
+      "latent space",
+      "Transformer"
+    ],
+    "source_context": "only produce very simple outputs such as class scores. Perceiver IO overcomes this limitation without sacrificing the original's appealing properties by learning to flexibly query the model's latent s...",
+    "library": "transformers",
+    "source": "model_doc/perceiver.md"
+  },
+  {
+    "query": "What are the consequences of overriding the docstring by setting the variable to something other than?",
+    "expected_answer": "Setting the variable to anything other than will override the docstring, allowing for customization of the docstrings if needed. This means that the original docstring from the source file will no longer be used, and the new value will be used instead. The linter will not automatically rewrite the names everywhere with the new value.",
+    "expected_context_keywords": [
+      "docstring",
+      "modular file",
+      "linter"
+    ],
+    "source_context": "precedence unless for assignments containing the pattern . These variables are typically used in and in the modeling files. They are big blocks of docstrings and the linter rewrites the names everywhe...",
+    "library": "transformers",
+    "source": "modular_transformers.md"
+  },
+  {
+    "query": "Can the model generate different types of outputs based on the type of problem it is being used to solve?",
+    "expected_answer": "Yes, the model can generate different types of outputs based on the type of problem it is being used to solve, as indicated by the various output classes listed, such as Seq2SeqModelOutput, CausalLMOutput, and SequenceClassifierOutput. These output classes suggest that the model can be used for a range of tasks, including sequence-to-sequence modeling, causal language modeling, and sequence classification. The specific output type is documented on the corresponding model page.",
+    "expected_context_keywords": [
+      "ModelOutput",
+      "BaseModelOutput",
+      "Seq2SeqModelOutput"
+    ],
+    "source_context": "one model type. Specific output types are documented on their corresponding model page. ModelOutput [[autodoc]] utils.ModelOutput - to_tuple BaseModelOutput [[autodoc]] modeling_outputs.BaseModelOutpu...",
+    "library": "transformers",
+    "source": "main_classes/output.md"
+  },
+  {
+    "query": "What is the FID score achieved by UniPC on unconditional sampling for CIFAR10?",
+    "expected_answer": "The UniPC achieves a 3.87 FID score on unconditional sampling for CIFAR10. This score is obtained with only 10 function evaluations, demonstrating the model's efficiency. The FID score is a measure of the model's performance in generating realistic images.",
+    "expected_context_keywords": [
+      "FID",
+      "CIFAR10",
+      "UniPC"
+    ],
+    "source_context": "both unconditional and conditional sampling using pixel-space and latent-space DPMs. Our UniPC can achieve 3.87 FID on CIFAR10 (unconditional) and 7.51 FID on ImageNet 256×256 (conditional) with only ...",
+    "library": "diffusers",
+    "source": "api/schedulers/unipc.md"
+  },
+  {
+    "query": "What is the default directory where the JSON results will be saved?",
+    "expected_answer": "The default directory where the JSON results will be saved is the current directory.",
+    "expected_context_keywords": [
+      "JSON file",
+      "Directory",
+      "Current directory"
+    ],
+    "source_context": "where a method is skipped - returns a summary json you can load as a DataFrame/inspect **For instance test_inputs_embeds is skipped in a whooping 39% proportion at the time of writing this util.** !do...",
+    "library": "transformers",
+    "source": "internal/model_debugging_utils.md"
+  },
+  {
+    "query": "What types of processors are listed under the LogitsProcessorList class?",
+    "expected_answer": "The LogitsProcessorList class can be used with various types of processors, including AlternatingCodebooksLogitsProcessor, ClassifierFreeGuidanceLogitsProcessor, EncoderNoRepeatNGramLogitsProcessor, and many others.",
+    "expected_context_keywords": [
+      "LogitsProcessorList",
+      "AlternatingCodebooksLogitsProcessor",
+      "ClassifierFreeGuidanceLogitsProcessor"
+    ],
+    "source_context": "has two keys that are and . We document here all output types. [[autodoc]] generation.GenerateDecoderOnlyOutput [[autodoc]] generation.GenerateEncoderDecoderOutput [[autodoc]] generation.GenerateBeamD...",
+    "library": "transformers",
+    "source": "internal/generation_utils.md"
+  },
+  {
+    "query": "What is the purpose of using a sub-set of the output tokens as target for XLNet pre-training?",
+    "expected_answer": "The purpose of using a sub-set of the output tokens as target for XLNet pre-training is due to the difficulty of training a fully auto-regressive model over various factorization orders. This approach allows XLNet to build on the traditional autoregressive model training strategy while permuting the tokens in the sentence and using a mask to hide previous tokens. This enables the model to predict the next token in the sequence.",
+    "expected_context_keywords": [
+      "auto-regressive model",
+      "factorization order",
+      "permutation"
+    ],
+    "source_context": "The specific attention pattern can be controlled at training and test time using the input. - Due to the difficulty of training a fully auto-regressive model over various factorization order, XLNet is...",
+    "library": "transformers",
+    "source": "model_doc/xlnet.md"
+  },
+  {
+    "query": "How does BPE learn merge rules to form a new symbol from two symbols in the base vocabulary?",
+    "expected_answer": "BPE learns merge rules by counting the frequency of each possible symbol pair in the base vocabulary and picking the symbol pair that occurs most frequently. It does so until the vocabulary has attained the desired vocabulary size, which is a hyperparameter to define before training the tokenizer. The learned merge rules are then applied to new words to form new symbols.",
+    "expected_context_keywords": [
+      "pre-tokenization",
+      "base vocabulary",
+      "merge rules"
+    ],
+    "source_context": "Subword Units (Sennrich et al., 2015). BPE relies on a pre-tokenizer that splits the training data into words. Pretokenization can be as simple as space tokenization, e.g. GPT-2, RoBERTa. More advance...",
+    "library": "transformers",
+    "source": "tokenizer_summary.md"
+  },
+  {
+    "query": "What is the typical way to use a different vision backbone with the UPerNet model?",
+    "expected_answer": "To use a different vision backbone with the UPerNet model, you can instantiate the model with the appropriate backbone, such as ConvNeXt. This will randomly initialize all the weights of the model. The UPerNet model can be used with any vision backbone.",
+    "expected_context_keywords": [
+      "ConvNeXt",
+      "UPerNet",
+      "vision backbone"
+    ],
+    "source_context": "be used with any vision backbone, like so: To use another vision backbone, like ConvNeXt, simply instantiate the model with the appropriate backbone: Note that this will randomly initialize all the we...",
+    "library": "transformers",
+    "source": "model_doc/upernet.md"
+  },
+  {
+    "query": "Can a test run with and without ANSI escape codes without any extra cleanup?",
+    "expected_answer": "No, a test cannot run with and without ANSI escape codes without any extra cleanup because the captured output may contain characters that reset everything that has been printed so far.",
+    "expected_context_keywords": [
+      "capsys",
+      "ANSI escape codes",
+      "context manager"
+    ],
+    "source_context": "be cached and thus the download time not measured. Hence check the execution speed report in CI logs instead (the output of ). That report is also useful to find slow outliers that aren't marked as su...",
+    "library": "transformers",
+    "source": "testing.md"
+  },
+  {
+    "query": "What is the modular architecture pattern for new models in the 🤗 Transformers library?",
+    "expected_answer": "The modular architecture pattern for new models in the 🤗 Transformers library involves creating a modular file using the modular model converter, with all code, including modeling and configuration, contained within this file. This pattern allows for reuse of existing patterns from similar models and enables compatibility with inference engines. A modular guide is provided to help set up a modular file.",
+    "expected_context_keywords": [
+      "modular architecture",
+      "modular file",
+      "modular model converter"
+    ],
+    "source_context": "🤗 Transformers, please open an issue and describe: 1. What is the *motivation* behind this feature? Is it related to a problem or frustration with the library? Is it a feature related to something you...",
+    "library": "transformers",
+    "source": "contributing.md"
+  },
+  {
+    "query": "What external knowledge feature does Evolla incorporate to refine its response quality and relevance?",
+    "expected_answer": "Evolla incorporates Retrieval-Augmented Generation (RAG) for external knowledge incorporation to refine its response quality and relevance. This feature allows the model to access external knowledge and generate more accurate and relevant responses. The model also uses Direct Preference Optimization (DPO) to refine its performance based on preference signals.",
+    "expected_context_keywords": [
+      "Retrieval-Augmented Generation",
+      "Direct Preference Optimization",
+      "Evolla"
+    ],
+    "source_context": "functional diversity of proteins. Post-pretraining, Evolla integrates Direct Preference Optimization (DPO) to refine the model based on preference signals and Retrieval-Augmented Generation (RAG) for ...",
+    "library": "transformers",
+    "source": "model_doc/evolla.md"
+  },
+  {
+    "query": "What are the default parameters that control the generation process in the MusicGen model?",
+    "expected_answer": "The default parameters that control the generation process in the MusicGen model, such as sampling, guidance scale, and number of generated tokens, can be found in the model's generation config. These parameters can be updated as desired. Any arguments passed to the generate method will supersede those in the generation config.",
+    "expected_context_keywords": [
+      "generation config",
+      "sampling",
+      "guidance scale"
+    ],
+    "source_context": "audio prompt should ideally be free of the low-frequency signals usually produced by instruments such as drums and bass. The Demucs model can be used to separate vocals and other signals from the drum...",
+    "library": "transformers",
+    "source": "model_doc/musicgen_melody.md"
+  },
+  {
+    "query": "What is the recommended generation mode for the MusicGen model to achieve better results?",
+    "expected_answer": "The recommended generation mode for the MusicGen model to achieve better results is sampling, as it leads to significantly better results than greedy.",
+    "expected_context_keywords": [
+      "sampling",
+      "greedy",
+      "generation modes"
+    ],
+    "source_context": "token interleaving patterns, which eliminates the need for cascading several models, e.g., hierarchically or upsampling. Following this approach, we demonstrate how MusicGen can generate high-quality ...",
+    "library": "transformers",
+    "source": "model_doc/musicgen.md"
+  },
+  {
+    "query": "How does the single-file policy contribute to making a library easier to contribute to?",
+    "expected_answer": "The single-file policy contributes to making a library easier to contribute to by reducing dependencies and making the code easier to read, allowing contributors to work on individual parts without fear of breaking vital functionality. This design also makes it easier to review and contribute to multiple parts in parallel. The single-file policy is applied to pipelines and schedulers in the Diffusers library.",
+    "expected_context_keywords": [
+      "single-file policy",
+      "contributors",
+      "dependencies"
+    ],
+    "source_context": "code over one that contains many abstractions. - Open-source libraries rely on community contributions and therefore must build a library that is easy to contribute to. The more abstract the code, the...",
+    "library": "diffusers",
+    "source": "conceptual/philosophy.md"
+  },
+  {
+    "query": "What is the recommended way to pad inputs when using the TAPAS model?",
+    "expected_answer": "It's usually advised to pad the inputs on the right rather than the left when using the TAPAS model.",
+    "expected_context_keywords": [
+      "TAPAS",
+      "embeddings",
+      "position embeddings"
+    ],
+    "source_context": "encode longer sequences without running out of embeddings. This is reflected in the parameter of [], which is set to by default. The default versions of the models available on the hub all use relativ...",
+    "library": "transformers",
+    "source": "model_doc/tapas.md"
+  },
+  {
+    "query": "What does the linter do to unravel the code in the forward method?",
+    "expected_answer": "The linter automatically unravels the code in the forward method, meaning you don't need to overwrite it as the logic in the forward method remains identical to the parent class. The linter's unraveling process allows for the automatic addition of classes and functions as dependencies, similar to how some functions are added to a class without direct import.",
+    "expected_context_keywords": [
+      "linter",
+      "forward method",
+      "dependency tracing"
+    ],
+    "source_context": ". This change doesn't affect the logic in the forward method (layer name and usage is identical to the parent class), so you don't need to overwrite it. The linter automatically unravels it. Model hea...",
+    "library": "transformers",
+    "source": "modular_transformers.md"
+  },
+  {
+    "query": "What is the best practice for documenting new PyTorch model classes and their primary methods?",
+    "expected_answer": "The best practice for documenting new PyTorch model classes and their primary methods is to use standard docstrings and not redefine common arguments unless their behavior is different in your model. For classes, it retrieves parameter descriptions from the method's docstring. It is also recommended to run the documentation process locally and iteratively.",
+    "expected_context_keywords": [
+      "PyTorch",
+      "docstring",
+      "Transformers"
+    ],
+    "source_context": "the docstring based on the method's return type annotation. For example, if a method returns a [] subclass, extracts the field descriptions from the class' docstring to create a comprehensive return v...",
+    "library": "transformers",
+    "source": "auto_docstring.md"
+  },
+  {
+    "query": "How are the images and conditioning images transformed in the training script?",
+    "expected_answer": "The training script transforms the images and conditioning images by tokenizing the prompt and applying transforms to them. This process is part of preparing the dataset. The specific transformations applied are not detailed in the provided snippet, but it mentions that the process includes tokenizing the prompt.",
+    "expected_context_keywords": [
+      "tokenizing",
+      "transforms",
+      "dataset"
+    ],
+    "source_context": "aspect of the script in detail. If you're interested in learning more, feel free to read through the script and let us know if you have any questions or concerns. Script parameters The training script...",
+    "library": "diffusers",
+    "source": "training/t2i_adapters.md"
+  },
+  {
+    "query": "What is the purpose of prefix caching in certain situations?",
+    "expected_answer": "The purpose of prefix caching is to fill a cache with key-value pairs for a certain prefix prompt and reuse it to generate different sequences, which can help keep things stable and avoid indexing issues.",
+    "expected_context_keywords": [
+      "prefix caching",
+      "kv pairs",
+      "prefilled prompt"
+    ],
+    "source_context": "might cut out important tokens depending on how the Jinja template is written. For example, some models use special tokens during reasoning. These could get lost during re-encoding, causing indexing i...",
+    "library": "transformers",
+    "source": "kv_cache.md"
+  },
+  {
+    "query": "What is the name of the checkpoint used in the example to translate English speech to French text?",
+    "expected_answer": "The checkpoint used in the example to translate English speech to French text is facebook/s2t-medium-mustc-multilingual-st.",
+    "expected_context_keywords": [
+      "checkpoint",
+      "Speech2Text",
+      "multilingual"
+    ],
+    "source_context": "packages separately with . Also requires the development version of the libsndfile package which can be installed via a system package manager. On Ubuntu it can be installed as follows: - ASR and Spee...",
+    "library": "transformers",
+    "source": "model_doc/speech_to_text.md"
+  },
+  {
+    "query": "What version of the Encodec model is compatible with the 32kHz checkpoint of MusicGen?",
+    "expected_answer": "The provided documentation does not contain sufficient information to answer this question.",
+    "expected_context_keywords": [
+      "Encodec",
+      "MusicGen",
+      "checkpoint"
+    ],
+    "source_context": "If only the decoder needs to be loaded from the pre-trained checkpoint, it can be loaded by first specifying the correct config, or be accessed through the attribute of the composite model: Since the ...",
+    "library": "transformers",
+    "source": "model_doc/musicgen.md"
+  },
+  {
+    "query": "In which row does the sequence length exceed 2048, causing an out-of-memory error in both the SDPA and eager methods?",
+    "expected_answer": "The provided documentation does not contain sufficient information to answer this question.",
+    "expected_context_keywords": [
+      "OOM",
+      "SDPA",
+      "Seq len"
+    ],
+    "source_context": "2048 | 0.565 | 0.204 | 177.098 | 13484.1 | 3882.01 | 247.348 | | 2 | 128 | 0.037 | 0.032 | 15.121 | 1843.86 | 1844.78 | -0.05 | | 2 | 256 | 0.067 | 0.055 | 21.706 | 1999.72 | 1951.67 | 2.462 | | 2 | 5...",
+    "library": "transformers",
+    "source": "model_doc/gpt_neox.md"
+  },
+  {
+    "query": "What needs to be changed in the UNet2DConditionModel parameters to support inpainting?",
+    "expected_answer": "To support inpainting, the number of input channels in the UNet2DConditionModel parameters needs to be changed from 4 to 9.",
+    "expected_context_keywords": [
+      "UNet2DConditionModel",
+      "inpainting",
+      "input channels"
+    ],
+    "source_context": "Adapt a model to a new task Many diffusion systems share the same components, allowing you to adapt a pretrained model for one task to an entirely different task. This guide will show you how to adapt...",
+    "library": "diffusers",
+    "source": "training/adapt_a_model.md"
+  },
+  {
+    "query": "How do integration tests with exact output matching ensure the correctness of a model's output?",
+    "expected_answer": "Integration tests with exact output matching ensure the correctness of a model's output by testing end-to-end generation with exact output matching. For generative models, they test that generated text matches expected output exactly, while for non-generative models, they test that output logits match expected values. These tests use real checkpoints and real inputs to verify the model's output.",
+    "expected_context_keywords": [
+      "integration tests",
+      "exact output matching",
+      "end-to-end generation"
+    ],
+    "source_context": "guide shows a quick way to set up a modular file. - Reuse existing patterns from similar models as much as possible - You can make the model compatible with inference engines such as vLLM or SGLang, a...",
+    "library": "transformers",
+    "source": "contributing.md"
+  },
+  {
+    "query": "What is the purpose of using the  variable in templates?",
+    "expected_answer": "The variable is used to contain a list of tools in JSON schema format, making templates more compatible with the standard API.",
+    "expected_context_keywords": [
+      "JSON schema format",
+      "template compatibility",
+      "standard API"
+    ],
+    "source_context": "However, you have access to **any other keyword arguments that are passed** to the [] method. This provides flexibility and enables support for use-cases we may not have thought of while designing the...",
+    "library": "transformers",
+    "source": "chat_templating_writing.md"
+  },
+  {
+    "query": "What is the primary advantage of Arrow's columnar memory layout?",
+    "expected_answer": "The primary advantage of Arrow's columnar memory layout is that it provides zero-copy reads, which removes virtually all serialization overhead, and allows for faster querying and processing of slices or columns of data.",
+    "expected_context_keywords": [
+      "columnar memory layout",
+      "zero-copy reads",
+      "serialization overhead"
+    ],
+    "source_context": "Datasets 🤝 Arrow What is Arrow? Arrow enables large amounts of data to be processed and moved quickly. It is a specific data format that stores data in a columnar memory layout. This provides several ...",
+    "library": "datasets",
+    "source": "about_arrow.md"
+  },
+  {
+    "query": "What type of parallelism does a mixture-of-experts (MoE) model support according to the expert parallelism guide?",
+    "expected_answer": "A mixture-of-experts (MoE) model supports tensor parallelism and expert parallelism. For more information, refer to the expert parallelism guide. The Tensor Parallelism (TP) in Transformers blog post also provides a quick overview of tensor parallelism.",
+    "expected_context_keywords": [
+      "mixture-of-experts",
+      "tensor parallelism",
+      "expert parallelism"
+    ],
+    "source_context": "- Check the expert parallelism guide if you're using a mixture-of-experts (MoE) model. These models support tensor parallelism and expert parallelism. - Read the Tensor Parallelism (TP) in Transformer...",
+    "library": "transformers",
+    "source": "perf_infer_gpu_multi.md"
+  },
+  {
+    "query": "What are the two attention variants available for Core ML Stable Diffusion models?",
+    "expected_answer": "The two attention variants available for Core ML Stable Diffusion models are the 'original' attention, which is only compatible with CPU/GPU, and the attention variant introduced by Apple, which is optimized for ANE devices. The 'original' attention can be faster to run on CPU + GPU, while the Apple-introduced variant is suitable for modern iPhones, iPads, and M-series computers. These variants consider the hardware characteristics of different devices to optimize performance.",
+    "expected_context_keywords": [
+      "ANE",
+      "CPU/GPU",
+      "Core ML"
+    ],
+    "source_context": "1.5, 2.0 base, and 2.1 base - coreml community includes custom finetuned models - use this filter to return all available Core ML checkpoints If you can't find the model you're interested in, we recom...",
+    "library": "diffusers",
+    "source": "optimization/coreml.md"
+  },
+  {
+    "query": "What is the primary purpose of the two-stage cascade pipeline in VisualCloze?",
+    "expected_answer": "The primary purpose of the two-stage cascade pipeline in VisualCloze is to support high-resolution image synthesis while avoiding excessively high resolutions by downsampling images. This is achieved through a two-stage process, with the first stage downsampling images and the second stage using SDEdit for upsampling. The pipeline allows for convenient end-to-end sampling and also enables users to utilize each stage independently.",
+    "expected_context_keywords": [
+      "VisualClozePipeline",
+      "SDEdit",
+      "diffusers"
+    ],
+    "source_context": "Inference Model loading VisualCloze is a two-stage cascade pipeline, containing and . - In , each image is downsampled before concatenating images into a grid layout, avoiding excessively high resolut...",
+    "library": "diffusers",
+    "source": "api/pipelines/visualcloze.md"
+  },
+  {
+    "query": "What is the name of the person who contributed this model?",
+    "expected_answer": "The person who contributed this model is Suraj.",
+    "expected_context_keywords": [
+      "XGLMConfig",
+      "XGLMTokenizer",
+      "XGLMModel"
+    ],
+    "source_context": "on 171 out of 182 translation directions with 32 training examples, while surpassing the official supervised baseline in 45 directions. We present a detailed analysis of where the model succeeds and f...",
+    "library": "transformers",
+    "source": "model_doc/xglm.md"
+  },
+  {
+    "query": "What is the base frequency used for the Rotary Position Embedding (RoPE) in this model?",
+    "expected_answer": "The base frequency used for the Rotary Position Embedding (RoPE) in this model is 10,000,000.",
+    "expected_context_keywords": [
+      "Rotary Position Embedding",
+      "RoPE",
+      "base frequency"
+    ],
+    "source_context": "Encoding: Rotary Position Embedding (RoPE) applied to half of the attention head dimension with a base frequency of 10,000,000 - Hidden Size: 6144 - Vocab Size: 200,064 For more details refer to the r...",
+    "library": "transformers",
+    "source": "model_doc/minimax.md"
+  },
+  {
+    "query": "Who contributed the SAM 3 model to the project?",
+    "expected_answer": "The SAM 3 model was contributed by yonigozlan and ronghanghu.",
+    "expected_context_keywords": [
+      "SAM 3",
+      "yonigozlan",
+      "ronghanghu"
+    ],
+    "source_context": "image and video PCS, and improves previous SAM capabilities on visual segmentation tasks. We open source SAM 3 along with our new Segment Anything with Concepts (SA-Co) benchmark for promptable concep...",
+    "library": "transformers",
+    "source": "model_doc/sam3_tracker_video.md"
+  },
+  {
+    "query": "What are some alternative schedulers mentioned in the document that prioritize quality over speed?",
+    "expected_answer": "The documentation snippet does not explicitly mention the names of alternative schedulers that prioritize quality over speed, but it suggests trying a different scheduler for better quality.",
+    "expected_context_keywords": [
+      "scheduler",
+      "Diffusers",
+      "Inference Optimization"
+    ],
+    "source_context": "such as the image medium, subject, style, and aesthetic. A negative prompt may also help by guiding a model away from undesirable features by using words like low quality or blurry. For more details a...",
+    "library": "diffusers",
+    "source": "stable_diffusion.md"
+  },
+  {
+    "query": "What is the recommended way to set the option for the function to save GPU memory?",
+    "expected_answer": "The recommended way to set the option for the function to save GPU memory is to set it at the time of model initialization through the function, and then decide whether to return audio when the function is called. This allows for a flexible experience. When the option is set to return only text outputs, the model will get text responses faster.",
+    "expected_context_keywords": [
+      "GPU memory",
+      "Qwen3-Omni-MOE",
+      "FlashAttention 2"
+    ],
+    "source_context": "outputs, they can set in the function. This option will save about of GPU memory but the option for function will only allow to be set at . In order to obtain a flexible experience, we recommend that ...",
+    "library": "transformers",
+    "source": "model_doc/qwen3_omni_moe.md"
+  },
+  {
+    "query": "What are the main reasons why deterministic algorithms may be slower and decrease performance?",
+    "expected_answer": "Deterministic algorithms may be slower and decrease performance due to the disabling of benchmarking and the use of full-precision operations instead of TensorFloat32 (TF32) operations. Additionally, setting the environment variable CUBLAS_WORKSPACE_CONFIG to use only one buffer size during runtime may also contribute to the decrease in performance. These changes are made to ensure reproducibility and consistency in the results.",
+    "expected_context_keywords": [
+      "CUBLAS_WORKSPACE_CONFIG",
+      "TensorFloat32",
+      "benchmarking"
+    ],
+    "source_context": "they produce the same results. Deterministic algorithms may be slower and decrease performance. Use Diffusers' enable_full_determinism function to enable deterministic algorithms. Under the hood, work...",
+    "library": "diffusers",
+    "source": "using-diffusers/reusing_seeds.md"
+  },
+  {
+    "query": "What is the primary purpose of using a negative prompt in image generation?",
+    "expected_answer": "The primary purpose of using a negative prompt in image generation is to guide a model away from undesirable features. This is achieved by using words like low quality or blurry in the prompt. By doing so, the model can avoid generating images with these unwanted characteristics. This technique helps in refining the output to better match the desired outcome.",
+    "expected_context_keywords": [
+      "negative prompt",
+      "image generation",
+      "Diffusers"
+    ],
+    "source_context": "such as the image medium, subject, style, and aesthetic. A negative prompt may also help by guiding a model away from undesirable features by using words like low quality or blurry. For more details a...",
+    "library": "diffusers",
+    "source": "stable_diffusion.md"
+  },
+  {
+    "query": "What is used to capture PyTorch graphs with the Frame Evaluation API?",
+    "expected_answer": "TorchDynamo is used to capture PyTorch graphs with the Frame Evaluation API.",
+    "expected_context_keywords": [
+      "TorchDynamo",
+      "Frame Evaluation API",
+      "PyTorch graphs"
+    ],
+    "source_context": "after a certain number of training steps. torch.compile torch.compile compiles PyTorch code into optimized kernels that significantly speed up training. This feature relies on TorchDynamo to capture P...",
+    "library": "transformers",
+    "source": "perf_train_gpu_one.md"
+  },
+  {
+    "query": "What should you do if you think an issue on the GitHub issues tab is off-topic or a duplicate of another issue?",
+    "expected_answer": "If you think an issue on the GitHub issues tab is off-topic or a duplicate of another issue, you should answer the issue by encouraging the author to be more precise, provide the link to a duplicated issue, or redirect them to the forum or Discord.",
+    "expected_context_keywords": [
+      "GitHub issues",
+      "off-topic",
+      "duplicates"
+    ],
+    "source_context": "can open an issue about a technical question here. 2.5 Proposal to add a new model, scheduler, or pipeline If the diffusion model community released a new model, pipeline, or scheduler that you would ...",
+    "library": "diffusers",
+    "source": "conceptual/contribution.md"
+  },
+  {
+    "query": "How does the processor handle the application of OCR in different use cases?",
+    "expected_answer": "The processor handles the application of OCR differently in various use cases. In use cases 1 and 4, the processor applies OCR by default using PyTesseract. In use cases 2, 3, and 5, the user can choose to apply OCR themselves by initializing the image processor with apply_ocr set to False and providing the words and normalized bounding boxes. The processor then converts these into token-level labels.",
+    "expected_context_keywords": [
+      "PyTesseract",
+      "apply_ocr",
+      "token-level"
+    ],
+    "source_context": "can provide word labels to the processor, which are turned into token-level . [] uses PyTesseract, a Python wrapper around Google's Tesseract OCR engine, under the hood. Note that you can still use yo...",
+    "library": "transformers",
+    "source": "model_doc/layoutlmv2.md"
+  },
+  {
+    "query": "What is the purpose of temporal features in the model?",
+    "expected_answer": "The purpose of temporal features in the model is to serve as 'positional encodings' for the Transformer decoder, providing information about the time at which a time-series value was obtained.",
+    "expected_context_keywords": [
+      "temporal features",
+      "positional encodings",
+      "Transformer decoder"
+    ],
+    "source_context": "obtained on the 11th of August, then one could have [11, 8] as time feature vector (11 being \"day of the month\", 8 being \"month of the year\"). - : temporal features which the model will add to . These...",
+    "library": "transformers",
+    "source": "model_doc/time_series_transformer.md"
+  },
+  {
+    "query": "What are the hidden layer sizes for the ERNIE-Health-ZH and ERNIE-Gram-ZH models?",
+    "expected_answer": "The hidden layer size for the ERNIE-Health-ZH model is 312, and for the ERNIE-Gram-ZH model, it is 768. These models are part of the ERNIE family and can be found in the Hugging Face model hub. The ERNIE models have different configurations, including the number of layers, heads, and hidden sizes.",
+    "expected_context_keywords": [
+      "ErnieConfig",
+      "ErnieModel",
+      "Hidden"
+    ],
+    "source_context": "Chinese | Layer:4, Heads:12, Hidden:384 | | ernie-3.0-nano-zh | Chinese | Layer:4, Heads:12, Hidden:312 | | ernie-health-zh | Chinese | Layer:12, Heads:12, Hidden:768 | | ernie-gram-zh | Chinese | Lay...",
+    "library": "transformers",
+    "source": "model_doc/ernie.md"
+  },
+  {
+    "query": "How does gradient accumulation affect memory usage in model training?",
+    "expected_answer": "Gradient accumulation overcomes memory constraints by accumulating gradients over multiple mini-batches before updating the parameters, reducing memory by storing fewer gradients. This enables training with a larger effective batch size. However, it can slow down training due to additional forward and backward passes.",
+    "expected_context_keywords": [
+      "Gradient accumulation",
+      "Mini-batches",
+      "Effective batch size"
+    ],
+    "source_context": "because it takes advantage of a GPUs parallel processing power. It is recommended to use batch sizes that are powers of 2, such as 8, 64, 128, 256, 512, etc. The batch size depends on your GPU and the...",
+    "library": "transformers",
+    "source": "perf_train_gpu_one.md"
+  },
+  {
+    "query": "What types of decoders are available in the Perceiver model for audio-based tasks?",
+    "expected_answer": "The Perceiver model has a PerceiverAudioPreprocessor and a PerceiverAudioPostprocessor, but the specific decoder for audio-based tasks is not explicitly mentioned in the provided context. However, it can be inferred that audio-based tasks might utilize the PerceiverBasicDecoder or PerceiverMultimodalDecoder. For more precise information, referring to the specific documentation of each decoder is necessary.",
+    "expected_context_keywords": [
+      "PerceiverAudioPreprocessor",
+      "PerceiverAudioPostprocessor",
+      "PerceiverBasicDecoder"
+    ],
+    "source_context": "models.perceiver.modeling_perceiver.PerceiverImagePreprocessor PerceiverOneHotPreprocessor [[autodoc]] models.perceiver.modeling_perceiver.PerceiverOneHotPreprocessor PerceiverAudioPreprocessor [[auto...",
+    "library": "transformers",
+    "source": "model_doc/perceiver.md"
+  },
+  {
+    "query": "What is the purpose of using the ParakeetTokenizer?",
+    "expected_answer": "The purpose of using the ParakeetTokenizer is not explicitly stated in the provided documentation snippet, but based on the context, it appears to be part of the Parakeet model's processing pipeline, possibly for tokenization. The documentation mentions ParakeetTokenizer alongside other components like ParakeetFeatureExtractor and ParakeetProcessor, suggesting its role in preparing input features. However, the exact purpose and functionality of ParakeetTokenizer are not detailed in this snippet. Further information can be found in the [[autodoc]] link provided for ParakeetTokenizer.",
+    "expected_context_keywords": [
+      "ParakeetTokenizer",
+      "ParakeetFeatureExtractor",
+      "ParakeetProcessor"
+    ],
+    "source_context": "shapes to avoid recompilation. For example, if you know your audio will be under 30 seconds, you can use the processor to pad all inputs to 30 seconds, preparing consistent input features and attentio...",
+    "library": "transformers",
+    "source": "model_doc/parakeet.md"
+  },
+  {
+    "query": "What is the primary approach for model quantization in this case?",
+    "expected_answer": "The primary approach for model quantization in this case is to let a third-party library maintained by the ML community handle it, rather than supporting it directly in Transformers. This involves creating a new quantization config class and updating or creating specific files. The best starting point is to look at another quantization method such as Finegrained Fp8.",
+    "expected_context_keywords": [
+      "Transformers",
+      "Finegrained Fp8",
+      "HFQuantizer"
+    ],
+    "source_context": "this case, we prefer to only support inference in Transformers and let the third-party library maintained by the ML community deal handle the model quantization itself. Create new HFQuantizer class 0....",
+    "library": "transformers",
+    "source": "quantization/contribute.md"
+  },
+  {
+    "query": "What type of GPU was used for the benchmark mentioned in the document?",
+    "expected_answer": "The benchmark was run on a node of 4 H100 GPUs.",
+    "expected_context_keywords": [
+      "H100 GPUs",
+      "Ulysses",
+      "benchmark"
+    ],
+    "source_context": "be used when there are enough devices to arrange in a 2D grid (at least 4 devices). We ran a benchmark with Ulysess, Ring, and Unified Attention with this script on a node of 4 H100 GPUs. The results ...",
+    "library": "diffusers",
+    "source": "training/distributed_inference.md"
+  },
+  {
+    "query": "How many ways are there to instantiate a DAB-DETR model?",
+    "expected_answer": "There are three ways to instantiate a DAB-DETR model, including using pre-trained weights for the entire model, using pre-trained weights for the backbone with randomly initialized weights for the Transformer, and using randomly initialized weights for both the backbone and the Transformer.",
+    "expected_context_keywords": [
+      "DAB-DETR",
+      "Transformer",
+      "backbone"
+    ],
+    "source_context": "to the best performance on MS-COCO benchmark among the DETR-like detection models under the same setting, e.g., AP 45.7% using ResNet50-DC5 as backbone trained in 50 epochs. We also conducted extensiv...",
+    "library": "transformers",
+    "source": "model_doc/dab-detr.md"
+  },
+  {
+    "query": "What is the purpose of the modular file in Modular Transformers?",
+    "expected_answer": "The purpose of the modular file in Modular Transformers is to allow users to write everything, such as tokenizers, image processors, models, and configurations, in a modular way, with corresponding single-files generated automatically. This approach enables easier implementation and modification of models, including inheriting dependencies from superclasses and automatically inferring submodules. The modular file simplifies the process of creating and customizing models, such as BERT and RoBERTa, by reducing the amount of code needed.",
+    "expected_context_keywords": [
+      "Modular Transformers",
+      "tokenizers",
+      "config"
+    ],
+    "source_context": "it if an argument is added or completely removes it if an argument is deleted. - If a class inherits from another, like , the dependencies are automatically inferred. All submodules are also automatic...",
+    "library": "transformers",
+    "source": "modular_transformers.md"
+  },
+  {
+    "query": "What is the data type of the 'year' column?",
+    "expected_answer": "The provided documentation does not contain sufficient information to answer this question.",
+    "expected_context_keywords": [
+      "SQA",
+      "WTQ",
+      "WikiSQL-supervised"
+    ],
+    "source_context": "related to a table, in a conversational set-up. For example if you first ask \"what's the name of the first actor?\" then you can ask a follow-up question such as \"how old is he?\". Here, questions do no...",
+    "library": "transformers",
+    "source": "model_doc/tapas.md"
+  },
+  {
+    "query": "What is the default size of the feature map obtained from the visual backbone, which then gets flattened to obtain image tokens?",
+    "expected_answer": "The default size of the feature map obtained from the visual backbone is 7x7, which then gets flattened to obtain 49 image tokens.",
+    "expected_context_keywords": [
+      "visual backbone",
+      "feature map",
+      "image tokens"
+    ],
+    "source_context": "the visual backbone expects BGR channels instead of RGB, as all models in Detectron2 are pre-trained using the BGR format. The input are the bounding boxes (i.e. 2D-positions) of the input text tokens...",
+    "library": "transformers",
+    "source": "model_doc/layoutlmv2.md"
+  },
+  {
+    "query": "What is the dimension of the model used for generating these test results?",
+    "expected_answer": "The dimension of the model used for generating these test results is 2560.",
+    "expected_context_keywords": [
+      "Model dimension",
+      "MLP dimension",
+      "Layers"
+    ],
+    "source_context": "| 17.3 | 15.1 | 17.7 | 22.0 | 13.1 | | TQA | 47.9 | 45.4 | 49.9 | 53.6 | 35.9 | | ARC E | 80.9 | 81.8 | 81.1 | 84.6 | 89.7 | | ARC C | 62.7 | 64.7 | 66.0 | 69.0 | 77.2 | | OBQA | 63.8 | 61.4 | 64.6 | ...",
+    "library": "transformers",
+    "source": "model_doc/helium.md"
+  },
+  {
+    "query": "What is the main function of Stage C in the Würstchen pipeline?",
+    "expected_answer": "The main function of Stage C in the Würstchen pipeline is to generate latents in a very compressed latent space. This is the first step when generating text-conditional images. The generated latents are then passed to Stage B for decompression. Stage C plays a crucial role in the initial stages of the Würstchen pipeline.",
+    "expected_context_keywords": [
+      "Würstchen",
+      "Stage C",
+      "latent space"
+    ],
+    "source_context": "initialize the two main pipelines of Würstchen individually. Würstchen consists of 3 stages: Stage C, Stage B, Stage A. They all have different jobs and work only together. When generating text-condit...",
+    "library": "diffusers",
+    "source": "api/pipelines/wuerstchen.md"
+  },
+  {
+    "query": "What is the default image size generated by OmniGen for text-to-image tasks?",
+    "expected_answer": "The default image size generated by OmniGen for text-to-image tasks is 1024x1024.",
+    "expected_context_keywords": [
+      "OmniGen",
+      "text-to-image",
+      "pipeline"
+    ],
+    "source_context": "to efficiently load the same components into multiple pipelines. This pipeline was contributed by staoxiao. The original codebase can be found here. The original weights can be found under hf.co/shita...",
+    "library": "diffusers",
+    "source": "api/pipelines/omnigen.md"
+  },
+  {
+    "query": "What is the name of the default attention mechanism used when an implementation is available?",
+    "expected_answer": "The default attention mechanism used when an implementation is available is Scaled Dot Product Attention (SDPA).",
+    "expected_context_keywords": [
+      "Scaled Dot Product Attention",
+      "SDPA",
+      "FOV encoder"
+    ],
+    "source_context": "to a . The parameter can also be passed when initializing the model. The pretrained model at checkpoint uses the FOV encoder. To use the pretrained-model without FOV encoder, set when loading the mode...",
+    "library": "transformers",
+    "source": "model_doc/depth_pro.md"
+  },
+  {
+    "query": "What hardware is recommended for achieving the best speedups with SDPA?",
+    "expected_answer": "The recommended hardware for achieving the best speedups with SDPA is not explicitly stated in the provided documentation snippet, but it mentions a local benchmark using an A100-40GB GPU with PyTorch 2.3.0 on OS Ubuntu 22.04. For the best speedups, it is recommended to load the model in half-precision.",
+    "expected_context_keywords": [
+      "SDPA",
+      "A100-40GB",
+      "half-precision"
+    ],
+    "source_context": "paper. This model was contributed by sayakpaul. The original code can be found here. Usage tips - MSN (masked siamese networks) is a method for self-supervised pre-training of Vision Transformers (ViT...",
+    "library": "transformers",
+    "source": "model_doc/vit_msn.md"
+  },
+  {
+    "query": "How many models were open-sourced by the team in the year 2023, attracting over 10 million downloads on Hugging face?",
+    "expected_answer": "The team open-sourced a series of models, including ChatGLM-6B, GLM-4-9B, GLM-4V-9B, WebGLM, and CodeGeeX, attracting over 10 million downloads on Hugging Face in the year 2023.",
+    "expected_context_keywords": [
+      "ChatGLM-6B",
+      "GLM-4-9B",
+      "Hugging Face"
+    ],
+    "source_context": "Chinese alignments as measured by AlignBench. The GLM-4 All Tools model is further aligned to understand user intent and autonomously decide when and which tool(s) to use—including web browser, Python...",
+    "library": "transformers",
+    "source": "model_doc/glm.md"
+  },
+  {
+    "query": "What methods are suggested for optimizing LoRA inference in the document?",
+    "expected_answer": "The document suggests optimizing LoRA inference with methods like FlashAttention-3 and fp8 quantization. This information can be found in the Fast LoRA inference for Flux with Diffusers and PEFT blog post. The post is mentioned in the context of using PEFT for inference with the Diffusers library.",
+    "expected_context_keywords": [
+      "FlashAttention-3",
+      "fp8 quantization",
+      "Diffusers"
+    ],
+    "source_context": "the Space below. You can find additional LoRAs in the FLUX LoRA the Explorer and LoRA the Explorer Spaces. Check out the Fast LoRA inference for Flux with Diffusers and PEFT blog post to learn how to ...",
+    "library": "diffusers",
+    "source": "tutorials/using_peft_for_inference.md"
+  },
+  {
+    "query": "What is the size of the images this model is trained on?",
+    "expected_answer": "The model is trained on images of size 224x224.",
+    "expected_context_keywords": [
+      "LeViT",
+      "image classification",
+      "LevitModel"
+    ],
+    "source_context": "trained on images of size 224x224): *facebook/levit-128S*, *facebook/levit-128*, *facebook/levit-192*, *facebook/levit-256* and *facebook/levit-384*. Note that one should use [] in order to prepare im...",
+    "library": "transformers",
+    "source": "model_doc/levit.md"
+  },
+  {
+    "query": "What is the total number of active parameters in the GLM-4.5-Air model?",
+    "expected_answer": "The GLM-4.5-Air model has 12 billion active parameters.",
+    "expected_context_keywords": [
+      "GLM-4.5-Air",
+      "active parameters",
+      "hybrid reasoning models"
+    ],
+    "source_context": "variants are documented here as Glm4Moe. GLM-4.5 has **355** billion total parameters with **32** billion active parameters, while GLM-4.5-Air adopts a more compact design with **106** billion total p...",
+    "library": "transformers",
+    "source": "model_doc/glm4_moe.md"
+  },
+  {
+    "query": "What are some of the downstream tasks that can be performed using the CanineModel?",
+    "expected_answer": "The CanineModel can be used for downstream tasks such as sequence classification, multiple choice, token classification, and question answering. These tasks are supported by specific model classes like CanineForSequenceClassification, CanineForMultipleChoice, CanineForTokenClassification, and CanineForQuestionAnswering. The model's versatility allows it to be applied to a variety of natural language processing tasks.",
+    "expected_context_keywords": [
+      "CanineForSequenceClassification",
+      "CanineForTokenClassification",
+      "CanineForQuestionAnswering"
+    ],
+    "source_context": "downstream task. The pretrained model can be used for either masked language modeling or next sentence prediction. CanineConfig [[autodoc]] CanineConfig CanineTokenizer [[autodoc]] CanineTokenizer - b...",
+    "library": "transformers",
+    "source": "model_doc/canine.md"
+  },
+  {
+    "query": "How can you initialize an 🤗 Accelerate environment?",
+    "expected_answer": "You can initialize an 🤗 Accelerate environment by executing the command: accelerate config default or accelerate config default --num_cpu_cores_available 1 --num_gpus 1 for a default configuration without answering questions about your environment, or using the --non-interactive flag if your environment doesn't support an interactive shell.",
+    "expected_context_keywords": [
+      "Accelerate",
+      "PyTorch",
+      "virtual environment"
+    ],
+    "source_context": "or AdamW optimizers for memory-optimized training - optionally for monitoring training logs - optionally for DeepSpeed training - optionally if you would like to use the Prodigy optimizer for training...",
+    "library": "diffusers",
+    "source": "training/cogvideox.md"
+  },
+  {
+    "query": "What type of device was used to test latency in the document?",
+    "expected_answer": "The latency was tested on an NVIDIA 1080TI device.",
+    "expected_context_keywords": [
+      "NVIDIA",
+      "1080TI",
+      "latency"
+    ],
+    "source_context": "25.044 | | LCM w/ T-GATE | 11.171T | 2.024B | 3.533s | 25.028 | | LCM (Pixart-Alpha) | 8.563T | 611.350M | 4.733s | 36.086 | | LCM w/ T-GATE | 7.623T | 462.585M | 4.543s | 37.048 | The latency is test...",
+    "library": "diffusers",
+    "source": "optimization/tgate.md"
+  },
+  {
+    "query": "How does the VisualClozeGenerationPipeline differ from the VisualClozePipeline?",
+    "expected_answer": "The provided documentation does not contain sufficient information to answer this question.",
+    "expected_context_keywords": [
+      "VisualClozePipeline",
+      "VisualClozeGenerationPipeline",
+      "diffusers"
+    ],
+    "source_context": "Inference Model loading VisualCloze is a two-stage cascade pipeline, containing and . - In , each image is downsampled before concatenating images into a grid layout, avoiding excessively high resolut...",
+    "library": "diffusers",
+    "source": "api/pipelines/visualcloze.md"
+  },
+  {
+    "query": "What is the trade-off between using TensorFloat32 operations and full-precision operations?",
+    "expected_answer": "The trade-off between using TensorFloat32 operations and full-precision operations is that TensorFloat32 operations may be faster but are non-deterministic and less precise, whereas full-precision operations are more precise and consistent but may be slower. To enable deterministic algorithms, Diffusers' enable_full_determinism function can be used, which disables TensorFloat32 operations in favor of full-precision operations. This trade-off is related to the performance and reproducibility of the algorithms.",
+    "expected_context_keywords": [
+      "TensorFloat32",
+      "CUBLAS_WORKSPACE_CONFIG",
+      "enable_full_determinism"
+    ],
+    "source_context": "they produce the same results. Deterministic algorithms may be slower and decrease performance. Use Diffusers' enable_full_determinism function to enable deterministic algorithms. Under the hood, work...",
+    "library": "diffusers",
+    "source": "using-diffusers/reusing_seeds.md"
+  },
+  {
+    "query": "Which two schedulers have been ported to Swift from the Stable Diffusion implementation?",
+    "expected_answer": "The two schedulers that have been ported to Swift are the default one used by Stable Diffusion and another one, although the name of the second scheduler is not specified in the provided documentation.",
+    "expected_context_keywords": [
+      "Stable Diffusion",
+      "Swift",
+      "schedulers"
+    ],
+    "source_context": "Diffusers. These are some of the limitations to keep in mind: - Core ML models are only suitable for inference. They can't be used for training or fine-tuning. - Only two schedulers have been ported t...",
+    "library": "diffusers",
+    "source": "optimization/coreml.md"
+  },
+  {
+    "query": "What is an example of a task you can use the processor to prepare for consistent input features and attention masks?",
+    "expected_answer": "You can use the processor to pad all inputs to a specific length, for example, 30 seconds, to prepare consistent input features and attention masks for audio inputs.",
+    "expected_context_keywords": [
+      "processor",
+      "ParakeetProcessor",
+      "attention masks"
+    ],
+    "source_context": "shapes to avoid recompilation. For example, if you know your audio will be under 30 seconds, you can use the processor to pad all inputs to 30 seconds, preparing consistent input features and attentio...",
+    "library": "transformers",
+    "source": "model_doc/parakeet.md"
+  },
+  {
+    "query": "What are the consequences of using the SDXL VAE in the training process?",
+    "expected_answer": "The SDXL VAE is known to suffer from numerical instability, which can affect the training process. To mitigate this, a parameter is provided to specify a better VAE. The training script allows for customization of the VAE used, which can help improve the stability of the training process.",
+    "expected_context_keywords": [
+      "SDXL VAE",
+      "numerical instability",
+      "pretrained VAE"
+    ],
+    "source_context": "aspect of the script in detail. If you're interested in learning more, feel free to read through the script and let us know if you have any questions or concerns. Script parameters The training script...",
+    "library": "diffusers",
+    "source": "training/t2i_adapters.md"
+  },
+  {
+    "query": "What model is used as an example in the HuggingFace Quickstart for performing text generation?",
+    "expected_answer": "The Minitron-4B model is used as an example in the HuggingFace Quickstart for performing text generation.",
+    "expected_context_keywords": [
+      "Minitron-4B",
+      "HuggingFace",
+      "text generation"
+    ],
+    "source_context": "such as Mistral 7B, Gemma 7B and Llama-3 8B, and outperform state-of-the-art compression techniques from the literature. Please refer to our arXiv paper for more details. Minitron models are for resea...",
+    "library": "transformers",
+    "source": "model_doc/nemotron.md"
+  },
+  {
+    "query": "What is the name of the new learning rate scheduler proposed in the paper?",
+    "expected_answer": "The new learning rate scheduler proposed in the paper is called the Power scheduler. It is designed to be agnostic about the number of training tokens and batch size. The Power scheduler can consistently achieve impressive performance when combined with Maximum Update Parameterization. This scheduler helps models achieve comparable performance to state-of-the-art small language models.",
+    "expected_context_keywords": [
+      "Power scheduler",
+      "WSD scheduler",
+      "Maximum Update Parameterization"
+    ],
+    "source_context": "related hyperparameters, like depth and width, the zero-shot transfer from small corpus to large corpus is underexplored. In this paper, we study the correlation between optimal learning rate, batch s...",
+    "library": "transformers",
+    "source": "model_doc/granitemoe.md"
+  },
+  {
+    "query": "What is the correct command to set up a development environment in a virtual environment for the 🤗 Transformers library?",
+    "expected_answer": "To set up a development environment, run the command in a virtual environment. If 🤗 Transformers was already installed, remove it and reinstall it in editable mode with the flag. Depending on the OS, install Pytorch if the command fails, then run the command again.",
+    "expected_context_keywords": [
+      "virtual environment",
+      "Pytorch",
+      "editable mode"
+    ],
+    "source_context": "Create a new branch to hold your development changes: 🚨 **Do not** work on the branch! 4. Set up a development environment by running the following command in a virtual environment: If 🤗 Transformers ...",
+    "library": "transformers",
+    "source": "contributing.md"
+  },
+  {
+    "query": "What should you avoid doing when updating the main branch of a forked repository?",
+    "expected_answer": "When updating the main branch of a forked repository, you should avoid syncing with the upstream using a branch and PR on the forked repository. Instead, merge directly into the forked main. If a PR is necessary, follow specific steps after checking out your branch to avoid pinging the upstream repository.",
+    "expected_context_keywords": [
+      "upstream repository",
+      "forked repository",
+      "PR"
+    ],
+    "source_context": "or WSL), you need to configure git to transform Windows line endings to Linux line endings: One way to run the command on Windows is with MSYS2: 1. Download MSYS2, and we assume it's installed in . 2....",
+    "library": "transformers",
+    "source": "contributing.md"
+  },
+  {
+    "query": "Who are the contributors to the GLM-Image model?",
+    "expected_answer": "The contributors to the GLM-Image model are Raushan Turganbay and Yuxuan Zhang.",
+    "expected_context_keywords": [
+      "GLM-Image",
+      "Raushan Turganbay",
+      "Yuxuan Zhang"
+    ],
+    "source_context": "strong performance in information-dense scenarios. + Image-to-image: supports a wide range of tasks, including image editing, style transfer, multi-subject consistency, and identity-preserving generat...",
+    "library": "transformers",
+    "source": "model_doc/glm_image.md"
+  },
+  {
+    "query": "Do the AmusedPipeline and AmusedImg2ImgPipeline models have a method called __call__?",
+    "expected_answer": "Yes, both AmusedPipeline and AmusedImg2ImgPipeline have a method called __call__. This method is also present in AmusedInpaintPipeline. The provided documentation snippet confirms the presence of the __call__ method in these pipelines.",
+    "expected_context_keywords": [
+      "AmusedPipeline",
+      "__call__",
+      "AmusedImg2ImgPipeline"
+    ],
+    "source_context": "models which directly produce images at 256x256 and 512x512 resolutions.* | Model | Params | |-------|--------| | amused-256 | 603M | | amused-512 | 608M | AmusedPipeline [[autodoc]] AmusedPipeline - ...",
+    "library": "diffusers",
+    "source": "api/pipelines/amused.md"
+  },
+  {
+    "query": "What are the benefits of using the same class name prefix when inheriting from different classes from the same file?",
+    "expected_answer": "Using the same class name prefix when inheriting from different classes from the same file ensures consistency and helps the linter to automatically rename everything correctly, avoiding potential higher-order dependencies issues. This is particularly important when defining multimodal models. Consistency in naming helps prevent the linter from adding unwanted classes or raising warnings about ambiguous cases.",
+    "expected_context_keywords": [
+      "linter",
+      "multimodal models",
+      "class name prefix"
+    ],
+    "source_context": "precedence unless for assignments containing the pattern . These variables are typically used in and in the modeling files. They are big blocks of docstrings and the linter rewrites the names everywhe...",
+    "library": "transformers",
+    "source": "modular_transformers.md"
+  },
+  {
+    "query": "What is the single-file policy in models, and how is it partly followed in diffusion pipelines?",
+    "expected_answer": "The single-file policy in models is not fully followed, as models are designed to make use of smaller model building blocks. In contrast, diffusion pipelines partly follow this policy, with multiple pipeline files gathered in one pipeline folder. However, every pipeline should have its components documented in the file and accessible under the same name as attributes of the pipeline.",
+    "expected_context_keywords": [
+      "single-file policy",
+      "diffusion pipelines",
+      "model architecture"
+    ],
+    "source_context": "to one diffusion paper/project/release. Multiple pipeline files can be gathered in one pipeline folder, as it’s done for [](https://github.com/huggingface/diffusers/tree/main/src/diffusers/pipelines/s...",
+    "library": "diffusers",
+    "source": "conceptual/philosophy.md"
+  },
+  {
+    "query": "What are the three tensors that should be seen after applying transformations on the fly when loading an element of the dataset?",
+    "expected_answer": "After applying transformations, you should see a tensor with bounding boxes, a tensor with class labels, and a tensor with other relevant information. However, the exact details of these tensors are not specified in the provided context.",
+    "expected_context_keywords": [
+      "tensor",
+      "bounding boxes",
+      "class labels"
+    ],
+    "source_context": "function to the entire dataset using 🤗 Datasets [] method. This method applies transformations on the fly when you load an element of the dataset. At this point, you can check what an example from the...",
+    "library": "transformers",
+    "source": "tasks/object_detection.md"
+  },
+  {
+    "query": "What is the purpose of using a parameter to control the importance of each soft target in the knowledge distillation process?",
+    "expected_answer": "The purpose of using a parameter to control the importance of each soft target in the knowledge distillation process is to weigh the importance of the distillation loss. This allows the student model to mimic the teacher model by adjusting the significance of each soft target. The parameter helps in computing the divergence between the student and teacher models using the Kullback-Leibler Divergence loss.",
+    "expected_context_keywords": [
+      "Kullback-Leibler Divergence",
+      "distillation loss",
+      "soft target"
+    ],
+    "source_context": "want the student model (a randomly initialized MobileNet) to mimic the teacher model (fine-tuned vision transformer). To achieve this, we first get the logits output from the teacher and the student. ...",
+    "library": "transformers",
+    "source": "tasks/knowledge_distillation_for_image_classification.md"
+  },
+  {
+    "query": "What is the recommended method to autoregressively generate text given a document image at inference time?",
+    "expected_answer": "The recommended method to autoregressively generate text given a document image at inference time is to use the method.",
+    "expected_context_keywords": [
+      "inference time",
+      "autoregressively generate text",
+      "document image"
+    ],
+    "source_context": "UDOP architecture. Taken from the original paper. Usage tips - In addition to *input_ids*, [] also expects the input , which are the bounding boxes (i.e. 2D-positions) of the input tokens. These can b...",
+    "library": "transformers",
+    "source": "model_doc/udop.md"
+  },
+  {
+    "query": "What are the benefits of using the SAM-HQ model compared to the original SAM model?",
+    "expected_answer": "The SAM-HQ model produces higher quality masks than the original SAM model, particularly for objects with intricate structures and fine details. It predicts binary masks with more accurate boundaries and better handling of thin structures. The model maintains SAM's zero-shot generalization capabilities and only adds ~0.5% additional parameters compared to SAM.",
+    "expected_context_keywords": [
+      "SAM-HQ",
+      "mask decoder",
+      "ViT features"
+    ],
+    "source_context": "design reuses and preserves the pre-trained model weights of SAM, while only introducing minimal additional parameters and computation. We design a learnable High-Quality Output Token, which is inject...",
+    "library": "transformers",
+    "source": "model_doc/sam_hq.md"
+  },
+  {
+    "query": "What is the limitation of using Ulysses in the benchmark?",
+    "expected_answer": "The limitation of using Ulysses in the benchmark is that the number of devices it can use remains limited to the number of attention heads. This limitation is solved by unified attention. Ulysses provides better throughput but has a device limitation.",
+    "expected_context_keywords": [
+      "Ulysses",
+      "unified attention",
+      "attention heads"
+    ],
+    "source_context": "be used when there are enough devices to arrange in a 2D grid (at least 4 devices). We ran a benchmark with Ulysess, Ring, and Unified Attention with this script on a node of 4 H100 GPUs. The results ...",
+    "library": "diffusers",
+    "source": "training/distributed_inference.md"
+  },
+  {
+    "query": "What is the recommended installation method for the library to ensure successful running of the latest example scripts?",
+    "expected_answer": "The recommended installation method for the library is installing from source, which can be done by executing the provided steps in a new virtual environment. This ensures that the install is up to date and includes example-specific requirements. Installing from source is necessary for successfully running the latest versions of the example scripts.",
+    "expected_context_keywords": [
+      "installing from source",
+      "virtual environment",
+      "example scripts"
+    ],
+    "source_context": "or AdamW optimizers for memory-optimized training - optionally for monitoring training logs - optionally for DeepSpeed training - optionally if you would like to use the Prodigy optimizer for training...",
+    "library": "diffusers",
+    "source": "training/cogvideox.md"
+  },
+  {
+    "query": "What is the name of the technology discussed in the document?",
+    "expected_answer": "The technology discussed in the document is Text-to-Speech (TTS) technology.",
+    "expected_context_keywords": [
+      "TTS",
+      "transformers",
+      "text-to-speech"
+    ],
+    "source_context": "to the original audio in the example). Another thing to experiment with is the model's configuration. For example, try using to see if this improves the results. Finally, it is essential to consider e...",
+    "library": "transformers",
+    "source": "tasks/text-to-speech.md"
+  },
+  {
+    "query": "What are the main challenges in KIE tasks identified by the paper?",
+    "expected_answer": "The paper identifies two main challenges in KIE tasks: minimizing the error from incorrect text ordering and efficient learning from fewer downstream examples. These challenges are addressed by the proposed BROS model, which achieves comparable or better results on KIE benchmarks without relying on visual features. The BROS model effectively combines text and layout to understand the contextual and spatial semantics of texts in 2D space.",
+    "expected_context_keywords": [
+      "KIE",
+      "text ordering",
+      "downstream examples"
+    ],
+    "source_context": "serialization errors as it predicts next connection tokens from one token. perform the intra-entity linking task. It predicts relation from one token (of one entity) to another token (of another entit...",
+    "library": "transformers",
+    "source": "model_doc/bros.md"
+  },
+  {
+    "query": "What is the purpose of prefixing a pull request title with a period to indicate a work in progress?",
+    "expected_answer": "The purpose of prefixing a pull request title with a period is to indicate that it is a work in progress, which helps avoid duplicated work and differentiates it from pull requests that are ready to be merged.",
+    "expected_context_keywords": [
+      "pull request",
+      "work in progress",
+      "merge"
+    ],
+    "source_context": "1. Be a chameleon. Understand existing design patterns and syntax and make sure your code additions flow seamlessly into the existing code base. Pull requests that significantly diverge from existing ...",
+    "library": "diffusers",
+    "source": "conceptual/contribution.md"
+  },
+  {
+    "query": "What downstream tasks are supported by the FLUE protocol, and what is their respective guide?",
+    "expected_answer": "The FLUE protocol supports various downstream tasks, including text classification, token classification, question answering, masked language modeling, and multiple choice. The respective guides for these tasks are available as resources. The tasks are implemented using different Flaubert models, such as FlaubertForSequenceClassification, FlaubertForTokenClassification, and FlaubertForQuestionAnswering.",
+    "expected_context_keywords": [
+      "FLUE",
+      "FlaubertModel",
+      "FlaubertForSequenceClassification"
+    ],
+    "source_context": "protocol for the downstream tasks, called FLUE (French Language Understanding Evaluation), are shared to the research community for further reproducible experiments in French NLP.* This model was cont...",
+    "library": "transformers",
+    "source": "model_doc/flaubert.md"
+  },
+  {
+    "query": "What are the differences between DPRContextEncoderTokenizer and DPRContextEncoderTokenizerFast?",
+    "expected_answer": "The provided documentation does not contain sufficient information to answer this question.",
+    "expected_context_keywords": [
+      "DPRContextEncoderTokenizer",
+      "DPRContextEncoderTokenizerFast",
+      "Tokenizer"
+    ],
+    "source_context": "the inferred span actually answers the question). DPRConfig [[autodoc]] DPRConfig DPRContextEncoderTokenizer [[autodoc]] DPRContextEncoderTokenizer DPRContextEncoderTokenizerFast [[autodoc]] DPRContex...",
+    "library": "transformers",
+    "source": "model_doc/dpr.md"
+  },
+  {
+    "query": "What is the purpose of the Safety Checker in the Diffusers project?",
+    "expected_answer": "The Safety Checker in the Diffusers project checks and compares the class probability of a set of hard-coded harmful concepts in the embedding space against an image after it has been generated. This helps mitigate potential risks and dangers associated with diffusion technology. The Safety Checker is a safety feature that aims to prevent the generation of harmful content.",
+    "expected_context_keywords": [
+      "Safety Checker",
+      "diffusion technology",
+      "Stable Diffusion"
+    ],
+    "source_context": "goals lean and coherent. - **Accessibility**: the Diffusers project helps lower the entry bar for contributors who can help run it even without technical expertise. Doing so makes research artifacts m...",
+    "library": "diffusers",
+    "source": "conceptual/ethical_guidelines.md"
+  },
+  {
+    "query": "How does enabling FP16 inference affect performance for large models?",
+    "expected_answer": "Enabling FP16 inference can significantly speed up the performance of large models on GPU while saving memory, with most models not suffering noticeable performance loss. The larger the model, the less likely it is to suffer performance loss.",
+    "expected_context_keywords": [
+      "FP16 inference",
+      "GPU",
+      "PyTorch backend"
+    ],
+    "source_context": "bit specific, they are instead of regular . In short: Now becomes: This should be very transparent to your code because the pipelines are used in the same way. This is a simplified view, since the pip...",
+    "library": "transformers",
+    "source": "main_classes/pipelines.md"
+  },
+  {
+    "query": "What is the purpose of enabling temporal reasoning in the ChronoEdit pipeline?",
+    "expected_answer": "The purpose of enabling temporal reasoning in the ChronoEdit pipeline is to improve physical consistency. This is an optional feature that can be used for image editing. Enabling temporal reasoning allows for better physical plausibility in the edited images. This is particularly useful in contexts that require physical consistency.",
+    "expected_context_keywords": [
+      "temporal reasoning",
+      "physical consistency",
+      "physical plausibility"
+    ],
+    "source_context": "a few steps to avoid the high computational cost of rendering a full video. To validate ChronoEdit, we introduce PBench-Edit, a new benchmark of image-prompt pairs for contexts that require physical c...",
+    "library": "diffusers",
+    "source": "api/pipelines/chronoedit.md"
+  },
+  {
+    "query": "Can you describe the purpose of Skrample in relation to the stable diffusion model?",
+    "expected_answer": "Skrample is a fully modular scheduler that integrates with diffusers, including the stable diffusion model, to facilitate tasks such as inpainting, generation, and img2img. Its purpose is to provide a flexible and modular scheduling system for these models. This allows for more efficient and customizable use of the stable diffusion model in various applications.",
+    "expected_context_keywords": [
+      "Skrample",
+      "diffusers",
+      "stable diffusion model"
+    ],
+    "source_context": "generative image models stable-dreamfusion Text-to-3D & Image-to-3D & Mesh Exportation with NeRF + Diffusion StoryDiffusion StoryDiffusion can create a magic story by generating consistent images and ...",
+    "library": "diffusers",
+    "source": "community_projects.md"
+  },
+  {
+    "query": "What is the suggested solution if the DeepSpeed loss scaler is unable to find a scaling coefficient to overcome the loss overflow?",
+    "expected_answer": "If the DeepSpeed loss scaler is unable to find a scaling coefficient to overcome the loss overflow, try a higher value, usually 32 works.",
+    "expected_context_keywords": [
+      "DeepSpeed",
+      "loss scaler",
+      "fp16"
+    ],
+    "source_context": "Process killed at startup When the DeepSpeed process is killed during launch without a traceback, that usually means the program tried to allocate more CPU memory than is available on your system. Or ...",
+    "library": "transformers",
+    "source": "deepspeed.md"
+  },
+  {
+    "query": "How does Custom Diffusion differ from other techniques used to teach a pre-trained text-to-image diffusion model about new concepts?",
+    "expected_answer": "Custom Diffusion differs from other techniques in that it only fine-tunes the cross-attention maps of a pre-trained text-to-image diffusion model and supports multi-concept training by design. This allows for more flexibility and efficiency in teaching the model about new concepts. Additionally, Custom Diffusion can also perform Textual Inversion, making it a versatile technique.",
+    "expected_context_keywords": [
+      "Custom Diffusion",
+      "Textual Inversion",
+      "cross-attention maps"
+    ],
+    "source_context": "fine-tunes a model to teach it about a new subject. I.e. a few pictures of a person can be used to generate images of that person in different styles. Textual Inversion Paper Textual Inversion fine-tu...",
+    "library": "diffusers",
+    "source": "using-diffusers/controlling_generation.md"
+  },
+  {
+    "query": "What is the original number of parameters in the model before the reduction?",
+    "expected_answer": "The original number of parameters in the model before the reduction is 500,000,000.",
+    "expected_context_keywords": [
+      "parameters",
+      "sequence length",
+      "LSH Self Attention"
+    ],
+    "source_context": "d^2 = 2^9, n_s^1 = 2^9, n_s^2 = 2^{10}$ can drastically reduced the number of parameters from 500 000 000 to $2^{18} + 2^{19} \\approx 780 000$ parameters, this means 85% less memory usage. In practice...",
+    "library": "transformers",
+    "source": "model_doc/reformer.md"
+  },
+  {
+    "query": "What is the number of total videos in the dataset?",
+    "expected_answer": "The provided documentation does not contain sufficient information to answer this question.",
+    "expected_context_keywords": [
+      "video paths",
+      "dataset",
+      "video clips"
+    ],
+    "source_context": "level, the dataset is organized like so: You can then count the number of total videos. The () video paths appear like so: You will notice that there are video clips belonging to the same group / scen...",
+    "library": "transformers",
+    "source": "tasks/video_classification.md"
+  },
+  {
+    "query": "What is the recommended library to use for memory-efficient attention during training?",
+    "expected_answer": "The recommended library to use for memory-efficient attention during training is xFormers. Additionally, using PyTorch 2.0 or higher is suggested to automatically utilize scaled dot product attention. This can help speed up training and reduce memory usage. ",
+    "expected_context_keywords": [
+      "xFormers",
+      "PyTorch",
+      "scaled dot product attention"
+    ],
+    "source_context": "| 👍 | These examples are **actively** maintained, so please feel free to open an issue if they aren't working as expected. If you feel like another training example should be included, you're more tha...",
+    "library": "diffusers",
+    "source": "training/overview.md"
+  },
+  {
+    "query": "What are the four steps the utility takes to determine the list of tests to run?",
+    "expected_answer": "The utility takes four steps to determine the list of tests to run: checking each file in the diff for real code changes, building an internal map of impacted files, applying this map to the files gathered, and mapping each file to its corresponding test file(s). The utility checks for changes in code, comments, or docstrings and only keeps files with real code changes. It then builds a map of impacted files based on imports between modules. The utility applies this map to the files gathered and maps each file to its corresponding test file(s) to get the list of tests to run.",
+    "expected_context_keywords": [
+      "diff",
+      "internal map",
+      "recursive impact"
+    ],
+    "source_context": "between before and after the PR (what GitHub shows you in the \"Files changes\" tab) and picks the tests impacted by that diff. That utility can be run locally with: from the root of the Transformers re...",
+    "library": "transformers",
+    "source": "pr_checks.md"
+  },
+  {
+    "query": "What are the benefits of using FastVLM in the LLaVA-1.5 setup compared to prior works?",
+    "expected_answer": "FastVLM achieves a 3.2× improvement in time-to-first-token (TTFT) while maintaining similar performance on VLM benchmarks compared to prior works. It also achieves better performance on key benchmarks like SeedBench, MMMU, and DocVQA, with 85× faster TTFT and a vision encoder that is 3.4× smaller.",
+    "expected_context_keywords": [
+      "FastVLM",
+      "LLaVA-1.5",
+      "TTFT"
+    ],
+    "source_context": "optimized trade-off between resolution, latency, and accuracy. FastVLM incorporates FastViTHD, a novel hybrid vision encoder designed to output fewer tokens and significantly reduce encoding time for ...",
+    "library": "transformers",
+    "source": "model_doc/fast_vlm.md"
+  },
+  {
+    "query": "What does the '[]' in the syntax for suppressing or unsuppressing progress bars represent?",
+    "expected_answer": "The provided documentation does not contain sufficient information to answer this question.",
+    "expected_context_keywords": [
+      "progress bars",
+      "logging systems",
+      "verbosity setters"
+    ],
+    "source_context": "- (int value, 10): report all information. By default, progress bars will be displayed during model download. [] and [] can be used to suppress or unsuppress this behavior. vs Python has two logging s...",
+    "library": "transformers",
+    "source": "main_classes/logging.md"
+  },
+  {
+    "query": "What is the highest average score achieved by any model across all benchmarks in the given document?",
+    "expected_answer": "The highest average score achieved by any model across all benchmarks is 80.9, achieved by the ARC E model.",
+    "expected_context_keywords": [
+      "ARC E",
+      "Average",
+      "Benchmark"
+    ],
+    "source_context": "| 17.3 | 15.1 | 17.7 | 22.0 | 13.1 | | TQA | 47.9 | 45.4 | 49.9 | 53.6 | 35.9 | | ARC E | 80.9 | 81.8 | 81.1 | 84.6 | 89.7 | | ARC C | 62.7 | 64.7 | 66.0 | 69.0 | 77.2 | | OBQA | 63.8 | 61.4 | 64.6 | ...",
+    "library": "transformers",
+    "source": "model_doc/helium.md"
+  },
+  {
+    "query": "What are the modifications needed for the denoise block?",
+    "expected_answer": "The denoise block requires a new input to accept a parameter and an update to the computation in the method for applying Differential Diffusion.",
+    "expected_context_keywords": [
+      "denoise",
+      "Differential Diffusion",
+      "sub-block"
+    ],
+    "source_context": "two. Create placeholder for and by copying and modifying the existing ones. Print the block to see that it is composed of [] with three sub-blocks, , , and . Only the sub-block needs to be modified to...",
+    "library": "diffusers",
+    "source": "modular_diffusers/quickstart.md"
+  },
+  {
+    "query": "What are the capabilities of the Stable Diffusion XL model?",
+    "expected_answer": "The Stable Diffusion XL model is capable of text2image, image2image, and inpainting tasks. It is also available in a turbo version, which has similar capabilities. The model can be used for various applications such as image generation, editing, and manipulation.",
+    "expected_context_keywords": [
+      "Stable Diffusion XL",
+      "text2image",
+      "image2image"
+    ],
+    "source_context": "generation | | ControlNet | text2image, image2image, inpainting | | ControlNet with Flux.1 | text2image | | ControlNet with Hunyuan-DiT | text2image | | ControlNet with Stable Diffusion 3 | text2image...",
+    "library": "diffusers",
+    "source": "api/pipelines/overview.md"
+  },
+  {
+    "query": "What is the URL of the VPTQ GitHub repository?",
+    "expected_answer": "The URL of the VPTQ GitHub repository is https://github.com/microsoft/VPTQ.",
+    "expected_context_keywords": [
+      "VPTQ",
+      "GitHub",
+      "FINEGRAINED_FP8"
+    ],
+    "source_context": "🔴 | 🟢 | 🟢 | https://github.com/microsoft/VPTQ | | FINEGRAINED_FP8 | 🟢 | 🔴 | 🟢 | 🔴 | 🔴 | 🟢 | 🔴 | 8 | 🔴 | 🟢 | 🟢 | | | SpQR | 🔴 | 🔴 | 🟢 | 🔴 | 🔴 | 🔴 | 🟢 | 3 | 🔴 | 🟢 | 🟢 | https://github.com/Vahe1994/SpQR/...",
+    "library": "transformers",
+    "source": "quantization/overview.md"
+  },
+  {
+    "query": "What is the name of the model class that includes the forward method?",
+    "expected_answer": "The model class that includes the forward method is MambaModel or MambaLMHeadModel.",
+    "expected_context_keywords": [
+      "MambaModel",
+      "MambaLMHeadModel",
+      "forward"
+    ],
+    "source_context": "uses the original CUDA kernels. The FlashAttention equivalent implementation is hosted in the mamba-ssm and causal_conv1d repositories. Make sure to install them if your hardware supports it! - Mamba ...",
+    "library": "transformers",
+    "source": "model_doc/mamba.md"
+  },
+  {
+    "query": "What are the main differences between posting questions on the forum and on Discord in terms of indexing and information accessibility?",
+    "expected_answer": "The main differences between posting questions on the forum and on Discord are that the forum is better indexed by search engines, allowing for easier lookup of questions and answers over time, whereas Discord has a chat-like format that makes it harder to find information posted in the past. The forum ranks posts by popularity, not chronologically, making it more accessible for future readers. In contrast, Discord invites fast back-and-forth communication but reduces the visibility of questions and answers over time.",
+    "expected_context_keywords": [
+      "forum",
+      "Discord",
+      "search engines"
+    ],
+    "source_context": "asking or answering a question, the higher the quality of the publicly documented knowledge. In the same way, well-posed and well-answered questions create a high-quality knowledge database accessible...",
+    "library": "diffusers",
+    "source": "conceptual/contribution.md"
+  },
+  {
+    "query": "What are the three most important pieces of the Diffusers library?",
+    "expected_answer": "The three most important pieces of the Diffusers library are pipelines, models, and schedulers. They provide easy access to state-of-the-art diffusion technologies, allowing the community to build powerful generative AI applications. By adding a new model, pipeline, or scheduler, you might enable a new powerful use case for any of the user interfaces relying on Diffusers.",
+    "expected_context_keywords": [
+      "Pipelines",
+      "Models",
+      "Schedulers"
+    ],
+    "source_context": "to understand why it wasn't merged and try to open an improved PR. Good second issues are usually more difficult to get merged compared to good first issues, so don't hesitate to ask for help from the...",
+    "library": "diffusers",
+    "source": "conceptual/contribution.md"
+  },
+  {
+    "query": "What is the main difference between the T5 model and the LongT5 model?",
+    "expected_answer": "The main difference between the T5 model and the LongT5 model is that LongT5 does not use a task prefix and is designed to work efficiently on long-range sequence-to-sequence tasks, handling input sequences of up to 16,384 tokens. Additionally, LongT5 uses a different pre-training objective.",
+    "expected_context_keywords": [
+      "T5 model",
+      "LongT5",
+      "sequence-to-sequence"
+    ],
+    "source_context": "- [] is an extension of [] exchanging the traditional encoder *self-attention* layer with efficient either *local* attention or *transient-global* (*tglobal*) attention. - Unlike the T5 model, LongT5 ...",
+    "library": "transformers",
+    "source": "model_doc/longt5.md"
+  },
+  {
+    "query": "What type of objects should be passed to the method mentioned in the document?",
+    "expected_answer": "All PyTorch objects, including model, optimizer, scheduler, and dataloaders, should be passed to the method.",
+    "expected_context_keywords": [
+      "PyTorch",
+      "optimizer",
+      "dataloader"
+    ],
+    "source_context": "your model on a device because [] knows which device to move your model to. All PyTorch objects (model, optimizer, scheduler, dataloaders) should be passed to the [] method now. This method moves your...",
+    "library": "transformers",
+    "source": "accelerate.md"
+  },
+  {
+    "query": "What is the purpose of using a segmentation map as a prompt mask in the given document?",
+    "expected_answer": "The purpose of using a segmentation map as a prompt mask is to guide the model during one-shot semantic segmentation tasks, allowing for more precise and targeted image processing. This approach enables the model to focus on specific areas of interest within the image. The use of segmentation maps as prompt masks is an alternative to using RGB images. It is advisable to preprocess and postprocess the images with the appropriate methods for optimal results.",
+    "expected_context_keywords": [
+      "segmentation maps",
+      "prompt masks",
+      "one-shot semantic segmentation"
+    ],
+    "source_context": "and mask to the model. - One can either use segmentation maps or RGB images as prompt masks. If using the latter make sure to set in the method. - It's highly advisable to pass when using (not conside...",
+    "library": "transformers",
+    "source": "model_doc/seggpt.md"
+  },
+  {
+    "query": "What is the effect of reducing the resolution on memory usage?",
+    "expected_answer": "Reducing the resolution can save memory. Higher resolution requires more compute, whereas lower resolution reduces memory usage.",
+    "expected_context_keywords": [
+      "resolution",
+      "compute",
+      "memory"
+    ],
+    "source_context": "or videos for better reference as show below. - Use the and parameters in [] to set the resolution. Higher resolution can require more compute whereas reducing the resolution can save memory as follow...",
+    "library": "transformers",
+    "source": "model_doc/qwen2_5_vl.md"
+  },
+  {
+    "query": "What is the purpose of the Copied from mechanism in the context of diffusion pipelines?",
+    "expected_answer": "The Copied from mechanism is used when pipelines share similar functionality, allowing for code reuse and reducing duplication.",
+    "expected_context_keywords": [
+      "Copied from mechanism",
+      "pipelines",
+      "diffusion pipelines"
+    ],
+    "source_context": "to one diffusion paper/project/release. Multiple pipeline files can be gathered in one pipeline folder, as it’s done for [](https://github.com/huggingface/diffusers/tree/main/src/diffusers/pipelines/s...",
+    "library": "diffusers",
+    "source": "conceptual/philosophy.md"
+  },
+  {
+    "query": "What library is used for augmenting images in the document?",
+    "expected_answer": "Albumentations is used for augmenting images in the document.",
+    "expected_context_keywords": [
+      "Albumentations",
+      "object detection",
+      "DETR"
+    ],
+    "source_context": "format . It has to be adjusted to work for other formats like . As a final step of getting familiar with the data, explore it for potential issues. One common problem with datasets for object detectio...",
+    "library": "transformers",
+    "source": "tasks/object_detection.md"
+  },
+  {
+    "query": "What is the default resizing behavior of the model?",
+    "expected_answer": "The default resizing behavior of the model resizes images so that the longest edge is 4*364 pixels. This behavior can be customized by passing a dictionary to the size parameter. The do_resize parameter controls whether resizing is enabled or not.",
+    "expected_context_keywords": [
+      "do_resize",
+      "size",
+      "upsampling"
+    ],
+    "source_context": "than previously available datasets. We release the model along with the datasets created for its training.* Usage tips Input images are processed either by upsampling (if resizing is enabled) or at th...",
+    "library": "transformers",
+    "source": "model_doc/idefics3.md"
+  },
+  {
+    "query": "What is the recommended setting for the do_sample parameter to avoid incorrect or degenerate outputs?",
+    "expected_answer": "The recommended setting for the do_sample parameter is to keep it as True, as setting do_sample=False may lead to incorrect or degenerate outputs from the AR model. This is because the AR model used in GLM-Image is configured with a temperature by default, allowing for varied generated images across runs.",
+    "expected_context_keywords": [
+      "do_sample",
+      "AR model",
+      "GlmImagePipeline"
+    ],
+    "source_context": "The codebase can be found here. Usage examples Text to Image Generation Image to Image Generation + Since the AR model used in GLM-Image is configured with and a temperature of by default, the generat...",
+    "library": "diffusers",
+    "source": "api/pipelines/glm_image.md"
+  },
+  {
+    "query": "What conditions enable the LoRA adapter in the system?",
+    "expected_answer": "The LoRA adapter is automatically enabled when audio features are present and disabled for text-only inputs.",
+    "expected_context_keywords": [
+      "LoRA",
+      "audio features",
+      "Granite Speech"
+    ],
+    "source_context": "PEFT to ensure the LoRA is correctly applied! - The model expects 16kHz sampling rate audio. The processor will automatically resample if needed. - The LoRA adapter is automatically enabled when audio...",
+    "library": "transformers",
+    "source": "model_doc/granite_speech.md"
+  },
+  {
+    "query": "What are the different schedulers in KarrasDiffusionSchedulers distinguished by in terms of their noise sampling strategy and network scaling?",
+    "expected_answer": "The different schedulers in KarrasDiffusionSchedulers are distinguished by their noise sampling strategy, the type of network and scaling, the training strategy, and how the loss is weighed. The schedulers are a broad generalization of those in 🤗 Diffusers and provide a good abstraction for the design of the main schedulers implemented. They fall into a taxonomy based on the ordinary differential equations (ODE) solver type.",
+    "expected_context_keywords": [
+      "KarrasDiffusionSchedulers",
+      "noise sampling strategy",
+      "SchedulerMixin"
+    ],
+    "source_context": "Karras | N/A | very similar to | | DPM++ SDE | [] | | | DPM++ SDE Karras | [] | init with | | DPM2 | [] | | | DPM2 Karras | [] | init with | | DPM2 a | [] | | | DPM2 a Karras | [] | init with | | DPM ...",
+    "library": "diffusers",
+    "source": "api/schedulers/overview.md"
+  },
+  {
+    "query": "What is the purpose of the training examples provided in the document?",
+    "expected_answer": "The purpose of the training examples is to provide self-contained, easy-to-tweak, beginner-friendly, and single-purpose scripts for users to train models. These examples are actively maintained and can be used to test and tweak different training scripts, such as DreamBooth. Users can also request new training examples through a Feature Request.",
+    "expected_context_keywords": [
+      "training scripts",
+      "Feature Request",
+      "self-contained"
+    ],
+    "source_context": "| 👍 | These examples are **actively** maintained, so please feel free to open an issue if they aren't working as expected. If you feel like another training example should be included, you're more tha...",
+    "library": "diffusers",
+    "source": "training/overview.md"
+  },
+  {
+    "query": "What are the benefits of opening a Pull Request to submit a resource to this document?",
+    "expected_answer": "The benefits of opening a Pull Request to submit a resource include having the resource reviewed for potential inclusion, demonstrating something new instead of duplicating an existing resource, and contributing to the growth of the documentation. This process allows for community involvement and ensures the quality of the submitted resources. The review process helps maintain the documentation's integrity and relevance.",
+    "expected_context_keywords": [
+      "Pull Request",
+      "BeitModel",
+      "BeitConfig"
+    ],
+    "source_context": "in submitting a resource to be included here, please feel free to open a Pull Request and we'll review it! The resource should ideally demonstrate something new instead of duplicating an existing reso...",
+    "library": "transformers",
+    "source": "model_doc/beit.md"
+  },
+  {
+    "query": "What type of machine learning technique involves a model creating its own learning objective from unlabeled data?",
+    "expected_answer": "Self-supervised learning is a category of machine learning techniques in which a model creates its own learning objective from unlabeled data. It differs from unsupervised learning and supervised learning in that the learning process is supervised, but not explicitly from the user. One example of self-supervised learning is masked language modeling.",
+    "expected_context_keywords": [
+      "self-supervised learning",
+      "masked language modeling",
+      "unlabeled data"
+    ],
+    "source_context": "some data (for instance all of Wikipedia). Pretraining methods involve a self-supervised objective, which can be reading the text and trying to predict the next word (see causal language modeling) or ...",
+    "library": "transformers",
+    "source": "glossary.md"
+  },
+  {
+    "query": "What is the purpose of quantization in the context of the provided models?",
+    "expected_answer": "Quantization helps reduce the memory requirements of very large models by storing model weights in a lower precision data type, which may have varying impact on video quality depending on the video model.",
+    "expected_context_keywords": [
+      "Quantization",
+      "dtype",
+      "model weights"
+    ],
+    "source_context": "Xue and Enze Xie. The original codebase can be found here. The original weights can be found under hf.co/Efficient-Large-Model. Available models: | Model | Recommended dtype | |:----------------------...",
+    "library": "diffusers",
+    "source": "api/pipelines/sana_sprint.md"
+  },
+  {
+    "query": "What is the name of the guidance technique that uses adaptive projection?",
+    "expected_answer": "The guidance technique that uses adaptive projection is called AdaptiveProjectedGuidance.",
+    "expected_context_keywords": [
+      "AdaptiveProjectedGuidance",
+      "Modular Diffusers",
+      "Guidance Techniques"
+    ],
+    "source_context": "Guiders Guiders are components in Modular Diffusers that control how the diffusion process is guided during generation. They implement various guidance techniques to improve generation quality and con...",
+    "library": "diffusers",
+    "source": "api/modular_diffusers/guiders.md"
+  },
+  {
+    "query": "How can you ensure testing is done against the current repository?",
+    "expected_answer": "To ensure testing is done against the current repository, the helper method creates a copy of the object and sets up the test suite to include the directory of the current repository. This allows for testing against the current repo without modifying the original object.",
+    "expected_context_keywords": [
+      "test suite",
+      "repository",
+      "helper method"
+    ],
+    "source_context": "under the test suite or it'll correctly set up to include one of these two directories, and also the directory to ensure the testing is done against the current repo, and finally with whatever was alr...",
+    "library": "transformers",
+    "source": "testing.md"
+  },
+  {
+    "query": "What is the name of the library that can be used to generate text using DBRX for faster results?",
+    "expected_answer": "The library that can be used to generate text using DBRX for faster results is PyTorch, specifically with flash-attention or scaled dot product attention implementations.",
+    "expected_context_keywords": [
+      "flash-attention",
+      "PyTorch",
+      "scaled dot product attention"
+    ],
+    "source_context": "model quality. More detailed information about DBRX Instruct and DBRX Base can be found in our technical blog post. This model was contributed by eitan-turok and abhi-db. The original code can be foun...",
+    "library": "transformers",
+    "source": "model_doc/dbrx.md"
+  },
+  {
+    "query": "What is the parameter count of the amused-512 model?",
+    "expected_answer": "The amused-512 model has 608M parameters.",
+    "expected_context_keywords": [
+      "amused-512",
+      "Params",
+      "resolutions"
+    ],
+    "source_context": "models which directly produce images at 256x256 and 512x512 resolutions.* | Model | Params | |-------|--------| | amused-256 | 603M | | amused-512 | 608M | AmusedPipeline [[autodoc]] AmusedPipeline - ...",
+    "library": "diffusers",
+    "source": "api/pipelines/amused.md"
+  },
+  {
+    "query": "What happens to the quality of generated images due to 8-bit representation?",
+    "expected_answer": "The quality of generated images can be impacted due to information loss in the representation space caused by the reduced precision in 8-bit representation. It is recommended to compare the outputs with and without 8-bit to assess the impact. This is relevant when using pipelines like PixArtSigmaPipeline.",
+    "expected_context_keywords": [
+      "8-bit",
+      "representation space",
+      "PixArtSigmaPipeline"
+    ],
+    "source_context": "in 8-bit can impact the quality of the generated images because of the information loss in the representation space caused by the reduced precision. It's recommended to compare the outputs with and wi...",
+    "library": "diffusers",
+    "source": "api/pipelines/pixart_sigma.md"
+  },
+  {
+    "query": "What is the number of heads used in the ERNIE-Gram-ZH model?",
+    "expected_answer": "The ERNIE-Gram-ZH model uses 12 heads.",
+    "expected_context_keywords": [
+      "Heads",
+      "ERNIE-Gram-ZH",
+      "Layer"
+    ],
+    "source_context": "Chinese | Layer:4, Heads:12, Hidden:384 | | ernie-3.0-nano-zh | Chinese | Layer:4, Heads:12, Hidden:312 | | ernie-health-zh | Chinese | Layer:12, Heads:12, Hidden:768 | | ernie-gram-zh | Chinese | Lay...",
+    "library": "transformers",
+    "source": "model_doc/ernie.md"
+  },
+  {
+    "query": "What is the purpose of the requirements.txt file in this custom generation method?",
+    "expected_answer": "The purpose of the requirements.txt file is to specify additional Python requirements for the custom generation method, which are checked at runtime and an exception is thrown if they are missing, prompting users to update their environment accordingly.",
+    "expected_context_keywords": [
+      "requirements.txt",
+      "runtime",
+      "Python requirements"
+    ],
+    "source_context": "your custom method, with the exception of the arguments used to trigger the custom generation ( and ). This means your can have a mix of original and custom arguments (as well as a different output ty...",
+    "library": "transformers",
+    "source": "generation_strategies.md"
+  },
+  {
+    "query": "What are the typical processing arguments expected in a Transformers processor function signature?",
+    "expected_answer": "The documentation does not explicitly list the typical processing arguments, but it mentions that the function signature includes all the typical processing arguments and any extra arguments a specific processor may require.",
+    "expected_context_keywords": [
+      "processor",
+      "modalities",
+      "function signature"
+    ],
+    "source_context": "add specific tests for those as well. Implement processor If your model accepts multiple modalities, like text and images, you need to add a processor. The processor centralizes the preprocessing of d...",
+    "library": "transformers",
+    "source": "add_new_model.md"
+  },
+  {
+    "query": "Can a SpeechT5Model be used for speech to text tasks?",
+    "expected_answer": "The SpeechT5Model itself is not specifically designed for speech-to-text tasks, but it can be used as a base model for SpeechT5ForSpeechToText, which is designed for speech-to-text tasks.",
+    "expected_context_keywords": [
+      "SpeechT5Model",
+      "SpeechT5ForSpeechToText",
+      "forward"
+    ],
+    "source_context": "automatic speech recognition, speech synthesis, speech translation, voice conversion, speech enhancement, and speaker identification.* This model was contributed by Matthijs. The original code can be ...",
+    "library": "transformers",
+    "source": "model_doc/speecht5.md"
+  },
+  {
+    "query": "What is the term for a technique that speeds up the learning process by leveraging knowledge from an existing model?",
+    "expected_answer": "The term for a technique that speeds up the learning process by leveraging knowledge from an existing model is transfer learning. This technique involves taking a pretrained model and adapting it to a dataset specific to the task at hand. It reduces the amount of training data needed and speeds up the learning process.",
+    "expected_context_keywords": [
+      "transfer learning",
+      "pretrained model",
+      "dataset"
+    ],
+    "source_context": "such: We can use our tokenizer to automatically generate such a sentence by passing the two sequences to as two arguments (and not a list, like before) like this: which will return: This is enough for...",
+    "library": "transformers",
+    "source": "glossary.md"
+  },
+  {
+    "query": "Can relative imports be used from parent or sibling folders in this custom generation method?",
+    "expected_answer": "No, relative imports from parent or sibling folders are not supported in this custom generation method. Only relative imports from the same-level folder are supported.",
+    "expected_context_keywords": [
+      "relative imports",
+      "same-level folder",
+      "custom generation method"
+    ],
+    "source_context": "your custom method, with the exception of the arguments used to trigger the custom generation ( and ). This means your can have a mix of original and custom arguments (as well as a different output ty...",
+    "library": "transformers",
+    "source": "generation_strategies.md"
+  }
+]
