@@ -43,7 +43,6 @@ app.add_middleware(
 )
 
 
-# ── схемы ─────────────────────────────────────────────────────────────────────
 class QueryRequest(BaseModel):
     query: str = Field(..., min_length=3, max_length=1000,
                        example="How do I fine-tune a model with Trainer?")
@@ -92,7 +91,6 @@ class CacheStats(BaseModel):
     redis_ok: bool
 
 
-# ── endpoints ─────────────────────────────────────────────────────────────────
 @app.get("/health", tags=["System"])
 def health():
     cache = get_cache()
@@ -131,7 +129,6 @@ def search(req: QueryRequest):
             raise HTTPException(status_code=500, detail=str(e))
         cache.set_contexts(req.query, contexts)
 
-    # обрезаем если передан top_k
     if req.top_k:
         contexts = contexts[: req.top_k]
 

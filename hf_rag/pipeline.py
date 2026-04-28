@@ -16,7 +16,6 @@ from sentence_transformers import CrossEncoder, SentenceTransformer
 
 from hf_rag.config import settings
 
-# ── промпт ────────────────────────────────────────────────────────────────────
 RAG_PROMPT = """\
 You are an expert assistant on the Hugging Face documentation (Transformers, Diffusers, Datasets, etc.).
 Answer the question using ONLY the provided context. Be concise and factual.
@@ -35,7 +34,6 @@ Answer:\
 _THINK_RE = re.compile(r"<think>.*?</think>", re.DOTALL)
 
 
-# ── синглтоны (загружаются один раз при старте) ───────────────────────────────
 @lru_cache(maxsize=1)
 def get_embedder() -> SentenceTransformer:
     return SentenceTransformer(settings.embedding_model)
@@ -62,7 +60,6 @@ def get_llm(api_key: str) -> ChatGroq:
     )
 
 
-# ── поиск ─────────────────────────────────────────────────────────────────────
 def vector_search(query: str, top_k: int | None = None) -> List[Dict]:
     """Векторный поиск через E5-large + Qdrant."""
     k = top_k or settings.top_k_retrieve
@@ -105,7 +102,6 @@ def search(query: str) -> List[Dict]:
     return rerank(query, candidates)
 
 
-# ── генерация ─────────────────────────────────────────────────────────────────
 def generate_answer(
     query: str,
     contexts: List[Dict],
@@ -137,7 +133,6 @@ def generate_answer(
     return _THINK_RE.sub("", raw).strip()
 
 
-# ── индексация ────────────────────────────────────────────────────────────────
 def index_corpus(jsonl_path: str, batch_size: int = 100, append: bool = False) -> tuple[int, int]:
     """
     Индексирует JSONL-корпус в Qdrant. Возвращает (n_docs, n_chunks).
@@ -157,10 +152,8 @@ def index_corpus(jsonl_path: str, batch_size: int = 100, append: bool = False) -
 
     cols = [c.name for c in qdrant.get_collections().collections]
     if not append:
-        # пересоздаём коллекцию полностью
         if settings.qdrant_collection in cols:
             qdrant.delete_collection(settings.qdrant_collection)
-    # создаём только если не существует
     cols = [c.name for c in qdrant.get_collections().collections]
     if settings.qdrant_collection not in cols:
         qdrant.create_collection(

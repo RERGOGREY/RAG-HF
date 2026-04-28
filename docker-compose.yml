@@ -2,7 +2,6 @@ version: "3.9"
 
 services:
 
-  # ── векторная БД ──────────────────────────────────────────────────────────
   qdrant:
     image: qdrant/qdrant:latest
     container_name: hf_rag_qdrant
@@ -12,7 +11,6 @@ services:
       - qdrant_data:/qdrant/storage
     restart: unless-stopped
 
-  # ── кэш ───────────────────────────────────────────────────────────────────
   redis:
     image: redis:7-alpine
     container_name: hf_rag_redis
@@ -22,7 +20,6 @@ services:
       - redis_data:/data
     restart: unless-stopped
 
-  # ── приложение (FastAPI + Streamlit в одном контейнере) ───────────────────
   app:
     build:
       context: .
@@ -39,9 +36,6 @@ services:
       - qdrant
       - redis
     volumes:
-      # монтируем корпус снаружи (удобно при переиндексации)
-      - ./rag_corpus_cleaned_v2:/app/rag_corpus_cleaned_v2:ro
-      # используем уже скачанные модели с хоста — не качаем заново
       - ~/.cache/huggingface:/root/.cache/huggingface
     restart: unless-stopped
 

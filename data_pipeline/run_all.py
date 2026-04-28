@@ -98,7 +98,6 @@ def main() -> None:
     print(f"Версия документации : {ver_label}")
     print(f"Библиотеки          : {args.libs or 'все'}")
 
-    # ── Шаг 1: Скачивание документации ──────────────────────────────────────────
     if not args.skip_download:
         cmd = [py, str(HERE / "download.py"), "--out", args.raw_dir, "--version", args.version]
         if args.libs:
@@ -115,7 +114,6 @@ def main() -> None:
     else:
         print("\n Шаг 1 (download) пропущен")
 
-    # ── Шаг 2: Release Notes ─────────────────────────────────────────────────────
     if not args.skip_releases:
         cmd = [py, str(HERE / "fetch_releases.py"), "--out", args.releases]
         if args.libs:
@@ -132,7 +130,6 @@ def main() -> None:
     else:
         print("\n Шаг 2 (fetch_releases) пропущен")
 
-    # ── Шаг 3: Сборка корпуса ───────────────────────────────────────────────────
     if not args.skip_build:
         cmd = [
             py, str(HERE / "build_corpus.py"),
@@ -149,8 +146,6 @@ def main() -> None:
     else:
         print("\n Шаг 3 (build_corpus) пропущен")
 
-    # ── Шаг 4: Индексация обоих корпусов в Qdrant ────────────────────────────────
-    # Сначала индексируем основной корпус (пересоздаёт коллекцию)
     cmd = [
         py, str(HERE / "ingest.py"),
         "--corpus",     args.corpus,
@@ -179,7 +174,6 @@ def main() -> None:
         else:
             steps_fail.append("ingest_releases")
 
-    # ── Итог ─────────────────────────────────────────────────────────────────────
     total_elapsed = time.time() - total_start
     print(f"\n{'='*55}")
     print(f"Pipeline завершён за {total_elapsed/60:.1f} мин")

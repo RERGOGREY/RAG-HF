@@ -23,7 +23,7 @@ class Settings(BaseSettings):
     cache_ttl: int = 3600          # секунд
 
     # Corpus
-    corpus_path: str = "rag_corpus_cleaned_v2/corpus.jsonl"
+    corpus_path: str = "data_pipeline/corpus.jsonl"
     chunk_size: int = 600
     chunk_overlap: int = 80
 

@@ -21,7 +21,6 @@ class RAGCache:
         self._r = redis.from_url(settings.redis_url, decode_responses=True)
         self.ttl = settings.cache_ttl
 
-    # ── вспомогательные ───────────────────────────────────────────────────────
     def _key(self, prefix: str, query: str) -> str:
         digest = hashlib.md5(query.strip().lower().encode()).hexdigest()
         return f"rag:{prefix}:{digest}"
@@ -32,7 +31,6 @@ class RAGCache:
         except Exception:
             return False
 
-    # ── контексты (результаты поиска) ─────────────────────────────────────────
     def get_contexts(self, query: str) -> Optional[List[Dict]]:
         try:
             raw = self._r.get(self._key("ctx", query))
@@ -47,7 +45,6 @@ class RAGCache:
         except Exception as e:
             log.warning("Cache set_contexts error: %s", e)
 
-    # ── ответы ────────────────────────────────────────────────────────────────
     def get_answer(self, query: str) -> Optional[str]:
         try:
             return self._r.get(self._key("ans", query))
@@ -61,7 +58,6 @@ class RAGCache:
         except Exception as e:
             log.warning("Cache set_answer error: %s", e)
 
-    # ── статистика ────────────────────────────────────────────────────────────
     def stats(self) -> Dict:
         try:
             info = self._r.info("stats")

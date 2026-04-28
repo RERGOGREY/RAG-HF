@@ -9,14 +9,12 @@ import streamlit as st
 
 API_URL = "http://localhost:8000"
 
-# ── конфиг страницы ───────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="HuggingFace Docs RAG",
     page_icon="🤗",
     layout="wide",
 )
 
-# ── боковая панель ────────────────────────────────────────────────────────────
 with st.sidebar:
     st.title("⚙️ Настройки")
 
@@ -79,7 +77,6 @@ with st.sidebar:
         except Exception as e:
             st.error(str(e))
 
-# ── основной контент ──────────────────────────────────────────────────────────
 st.title("🤗 HuggingFace Docs RAG")
 st.caption(
     "RAG-система по документации **Transformers**, **Diffusers**, **Datasets** и других библиотек HuggingFace.  \n"
@@ -145,7 +142,6 @@ if ask_btn and query.strip():
 
     elapsed = round((time.perf_counter() - t0) * 1000, 0)
 
-    # ── ответ модели ──────────────────────────────────────────────────────────
     if "answer" in data:
         cache_badge = "🟢 из кэша" if data.get("answer_cache_hit") else "🔵 сгенерирован"
         st.subheader(f"💬 Ответ  {cache_badge}")
@@ -155,7 +151,6 @@ if ask_btn and query.strip():
             f"контекст: {'🟢 кэш' if data.get('context_cache_hit') else '🔵 поиск'}"
         )
 
-    # ── контексты ─────────────────────────────────────────────────────────────
     st.divider()
     ctx_label = "🔍 Найденные фрагменты" if "answer" not in data else "📄 Использованный контекст"
     cache_ctx = "🟢 из кэша" if data.get("cache_hit", data.get("context_cache_hit")) else "🔵 поиск"
